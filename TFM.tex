@@ -1,0 +1,429 @@
+\documentclass[spanish,a4paper,14pt,oneside]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Next 3+3 lines select PDF or PS output respectively (comment as apropriate)
+% To switch from PDF and PS comment/uncomment here
+% and change correspondingly the Makefile
+%
+\usepackage[pdftex]{color}
+\usepackage[pdftex]{graphicx}
+\graphicspath{{FIGURES/}}
+%\usepackage[dvips]{color}
+%%\usepackage[dvips]{graphicx}
+%\graphicspath{{FIGURES/}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{alltt}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{multirow}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SONY}{{\sc Sony}}
+\newcommand{\INTEL}{\textsf{\textsc{I}ntel}}
+
+%%% Traducimos el pseudocodigo
+\renewcommand{\algorithmicwhile}{\textbf{mientras}}
+\renewcommand{\algorithmicend}{\textbf{fin}}
+\renewcommand{\algorithmicdo}{\textbf{hacer}}
+\renewcommand{\algorithmicif}{\textbf{si}}
+\renewcommand{\algorithmicthen}{\textbf{entonces}}
+\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+\renewcommand{\algorithmicuntil}{\textbf{hasta que}}
+\renewcommand{\algorithmicelse}{\textbf{en otro caso}}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+
+%\newcommand{\RETURN}{\textbf{retornar} }
+\newcommand{\RET}{\STATE \textbf{retornar} }
+\newcommand{\TO}{\textbf{hasta} }
+\newcommand{\AND}{\textbf{y} }
+\newcommand{\OR}{\textbf{o} }
+
+%%%%%%%%%%%%%%%%% Creamos un entorno para listar cÃ³digo fuente %%%%%%%%%%%%%%%
+\newenvironment{sourcecode}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+{\end{list}}
+
+\newenvironment{littlesourcecode}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\tiny\bfseries}
+{\end{list}}
+
+\newenvironment{summary}
+{\par\noindent\begin{center}\textbf{Abstract}\end{center}\begin{itshape}\par\noindent}
+{\end{itshape}}
+
+\newenvironment{keywords}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item[\hskip\labelsep \bfseries Keywords:]}
+{\end{list}}
+
+\newenvironment{palabrasClave}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item[\hskip\labelsep \bfseries Palabras clave:]}
+{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\renewcommand\listtablename{Índice de Tablas}      % Estos comandos (al haber cargado babel)
+\renewcommand\listfigurename{Índice de Figuras}    % Han de ir inmediatamente después del begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\thispagestyle{empty}
+
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{0mm}
+
+\vspace*{\stretch{0.5}}
+
+\centering{\includegraphics[width=0.3\textwidth]{images/logo_vertical}
+\vspace*{\stretch{0.5}}
+\begin{center}
+{\Huge Trabajo de Fin de Máster}
+\end{center}
+
+\HRule
+\begin{flushright}
+        {\Huge Título} \\[2.5mm]
+        {\Large \textit{Title in English} .} \\[5mm]
+        {\Large Autor} \\[5mm]
+
+
+\end{flushright}
+\HRule
+\vspace*{\stretch{2}}
+\begin{center}
+  \Large La Laguna, \today
+\end{center}
+
+\setlength{\parindent}{5mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Signature page (add the official stamp)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\cleardoublepage
+\thispagestyle{empty}
+
+D. {\bf Nombre Apellido1 Apellido2}, con DNI número 12.345.678-X
+profesor
+Titular de Universidad
+adscrito al Departamento
+de Nombre del Departamento
+de la Universidad de La Laguna, como tutor
+
+\bigskip
+D. {\bf Nombre Apellido1 Apellido2}, con DNI número 12.345.678-X
+profesor
+Titular de Universidad
+adscrito al Departamento
+de Nombre del Departamento
+de la Universidad de La Laguna, como cotutor
+
+\bigskip
+\bigskip
+{\bf C E R T I F I C A (N)}
+
+\bigskip
+\bigskip
+\bigskip
+Que la presente memoria titulada:
+
+\bigskip
+``{\it Título del Trabajo.}''
+
+\bigskip
+\bigskip
+\bigskip
+
+\noindent ha sido realizada bajo su dirección por D. {\bf Nombre Apellido1 Apellido2},
+con DNI número 12.345.678-X.
+
+\bigskip
+\bigskip
+
+Y para que así conste, en cumplimiento de la legislación vigente y a los efectos
+oportunos firman la presente en La Laguna a \today
+
+%\cleardoublepage
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+
+{ \flushright
+
+\begin{LARGE}
+Agradecimientos
+\end{LARGE}
+
+\hspace{3mm}
+
+\begin{large}
+
+
+\hspace{3mm}
+XXX
+
+\hspace{3mm}
+XXX
+
+
+\hspace{3mm}
+XXX
+
+
+\hspace{3mm}
+XXX
+
+
+\end{large}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{huge}
+Licencia
+\end{huge}
+
+\bigskip
+* Si NO quiere permitir que se compartan las adaptaciones de tu obra
+y NO quieres permitir usos comerciales de tu obra indica:
+
+
+\centering{\includegraphics[width=0.2\textwidth]{images/by-nc-nd_88x31}
+\begin{center}
+{\Large \copyright~Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional.
+}
+\end{center}
+
+
+\bigskip
+* Si quiere permitir que se compartan las adaptaciones de tu obra mientras se comparta de la misma manera
+y NO quieres permitir usos comerciales de tu obra indica:
+
+\centering{\includegraphics[width=0.2\textwidth]{images/by-nc-sa_88x31}
+\begin{center}
+{\Large \copyright~Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional.
+}
+\end{center}
+
+
+
+\bigskip
+* Si quiere permitir que se compartan las adaptaciones de tu obra
+y NO quieres permitir usos comerciales de tu obra indica:
+
+\centering{\includegraphics[scale=1.5]{images/by-nc_88x31}}
+\begin{center}
+{\Large \copyright~Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional.
+}
+\end{center}
+
+\newpage
+
+\bigskip
+*Si NO quiere permitir que se compartan las adaptaciones de tu obra
+y quieres permitir usos comerciales de tu obra indica:
+
+\centering{\includegraphics[scale=1.5]{images/by-nd_88x31}}
+\begin{center}
+{\Large \copyright~Esta obra está bajo una licencia de Creative Commons Reconocimiento-SinObraDerivada 4.0 Internacional.
+}
+\end{center}
+
+
+\bigskip
+* Si quiere permitir que se compartan las adaptaciones de tu obra mientras se comparta de la misma manera
+y quieres permitir usos comerciales de tu obra (licencia de Cultura Libre) indica:
+
+\centering{\includegraphics[scale=1.5]{images/by-sa_88x31}}
+\begin{center}
+{\Large \copyright~Esta obra está bajo una licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional.
+}
+\end{center}
+
+
+\bigskip
+* Si quiere permitir que se compartan las adaptaciones de tu obra
+y quieres permitir usos comerciales de tu obra (licencia de Cultura Libre) indica:
+
+\centering{\includegraphics[scale=1.5]{images/by_88x31}}
+\begin{center}
+{\Large \copyright~Esta obra está bajo una licencia de Creative Commons Reconocimiento 4.0 Internacional.
+}
+\end{center}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage  %\cleardoublepage
+\begin{abstract}
+{\em
+
+El objetivo de este trabajo ha sido ....
+%
+bla, bla, bla
+%
+bla, bla, bla
+%
+bla, bla, bla
+
+\bigskip
+Se ha incluido el apartado de 'Licencia' con todas las posibles licencias abiertas (Creative Commons).
+En el caso en que se decida hacer público el contenido de la memoria, habrá que elegir una de ellas
+(y borrar las demás).
+La decisión de hacer pública o no la memoria se indica en el momento de subir la memoria a la Sede Electrónica de la ULL, paso necesario en el proceso de presentación del Trabajo Fin de Máster.
+
+\bigskip
+El documento de memoria debe tener un máximo de 100 páginas.
+
+\bigskip
+No se deben dejar páginas en blanco al comenzar un capítulo, ya que el documento no está pensado para ser
+impreso sino leído con un lector de ficheros en formato PDF.
+
+\bigskip
+También es recomendable limitar el tamaño de los márgenes ya que, al firmar digitalmente en la sede
+electrónica, se coloca un marco alrededor del texto original.
+
+\bigskip
+El tipo de letra base ha de ser de 14 puntos.
+}
+
+\begin{palabrasClave}
+Palabra clave1, Palabra clave2, $\ldots$
+\end{palabrasClave}
+
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage  %\cleardoublepage
+\begin{summary}
+{\em
+Insert here an abstract in an EU language (preferably English)
+}
+
+\begin{keywords}
+Keyword1, Keyword2, Keyword3, ...
+\end{keywords}
+
+\end{summary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{\pagestyle{empty}}
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pagestyle{myheadings} %my head defined by markboth or markright
+% No funciona bien \markboth sin "twoside" en \documentclass, pero al
+% ponerlo se dan un montÃ³n de errores de underfull \vbox, con lo que no se
+% ha puesto.
+\markboth{Nombre del alumno}{Título del proyecto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Numeracion en romanos
+\renewcommand{\thepage}{\roman{page}}
+\setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{\pagestyle{empty}}
+
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{\pagestyle{empty}}
+
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{\pagestyle{empty}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Numeracion a partir del capitulo I
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+
+
+\chapter{Introducción}
+\label{chapter:intro}
+
+\input{cap1.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Título del Capítulo Dos}
+\label{chapter:dos}
+
+\input{cap2.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{\pagestyle{empty}}
+\thispagestyle{empty}
+
+\chapter{Título del Capítulo Tres}
+\label{chapter:tres}
+
+\input{cap3.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Título del Capítulo Cuatro}
+\label{chapter:cuatro}
+
+\input{cap4.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{\pagestyle{empty}}
+\thispagestyle{empty}
+
+\chapter{Conclusiones y líneas futuras}
+\label{chapter:Conclusiones}
+
+\input{cap5.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{\pagestyle{empty}}
+\thispagestyle{empty}
+
+\chapter{Summary and Conclusions }
+\label{chapter:ingles}
+
+\input{cap6.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage{\pagestyle{empty}}
+\thispagestyle{empty}
+\begin{appendix}
+
+\chapter{Título del Apéndice 1}
+\label{appendix:1}
+\input{apendice1.tex}
+
+\chapter{Título del Apéndice 2}
+\label{appendix:2}
+\input{apendice2.tex}
+
+\end{appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{plain}
+
+\bibliography{memtfg}
+\nocite{*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
