@@ -3,45 +3,86 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %---------------------------------------------------------------------------------
-\section{Sección Uno}
+\section{Antecedentes}
 \label{1:sec:1}
 
-\begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-  \item Item 4
-\end{itemize}
+La World Wide Web está sujeta a un cambio continuo. La llegada de HTML5, la creciente importancia
+de AJAX y de la programación en el lado del cliente, las nuevas fronteras de la Web Semántica, y la
+explosión de las redes sociales son ejemplos de esta tendencia general.
+\bigskip
+
+Las aplicaciones web parecen evolucionar hacia entornos cada vez más ricos y flexibles en los que
+los usuarios pueden acceder con facilidad a los documentos, publicar contenido, escuchar música, ver
+vídeos, realizar dibujos e incluso jugar usando un navegador. Esta nueva clase de software ubicuo no
+cesa de ganar momentum y promueve nuevas formas de interacción y cooperación.
+\bigskip
+
+Ante la rápida evolución del software, los sistemas de control de versiones han adquirido una mayor importancia dentro de la metodología del desarrollo del software: la gestión de las versiones del propio software se ha convertido en una actividad crítica. Estos sistemas han evolucionado a la par que el software, proporcionando nuevas funcionalidades y orientándose hacia la colaboración.
 
 %---------------------------------------------------------------------------------
-\section{Sección Dos}
+\section{Estado actual del arte}
 \label{1:sec:2}
 
+Actualmente, hay numerosos sistemas de control de versiones. Todos ellos proporcionan mecanismos de almacenamiento del código, de su modificación y de consulta histórica del mismo, a la vez que proporcionan un entorno colaborativo en el que los usuarios pueden colaborar entre sí.
+
+En el caso particular de GitHub, además de proporcionar lo mencionado anteriormente, observando el creciente número de estudiantes que utiliza la plataforma, ha creado herramientas específicas para facilitar sus desarrollos (ej: Student Developer Pack) y provee a profesores de herramientas para gestionar dichos desarrollos (ej: GitHub Classrooms).
+
+Sin embargo, estas herramientas de gestión de desarrollos requieren una administración interactiva por parte del profesor. No cuentan aún con funcionalidades de automatización de tareas.
+
+%---------------------------------------------------------------------------------
+\section{Objetivos y actividades a realizar}
+\label{1:sec:3}
+
+En este proyecto se persigue integrar los conocimientos adquiridos durante los estudios del Máster y,
+en especial, del itinerario de Tecnologías de la Información para solucionar problemas actuales de aplicaciones y servicios Web.
+
+Los objetivos propuestos para alcanzar en este Trabajo de Fin de Máster ha sido los siguientes:
 \begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
+  \item Conocer, dominar y practicar con lenguajes y herramientas de desarrollo de aplicaciones Web
+en el servidor.
+  \item Conocer, dominar y practicar con diferentes lenguajes y librerías en el cliente.
+  \item Conocer, practicar y dominar de herramientas de Desarrollo Dirigido por Pruebas en entornos
+web.
+  \item Conocer, practicar y dominar diferentes lenguajes de marcas y de estilo.
+  \item Conocer, practicar y dominar diferentes mecanismos de despliegue.
+  \item Conocer, practicar y familiarizarse con diferentes mecanismos de seguridad, autentificación
+y autorización.
+  \item Conocer, practicar y dominar diferentes herramientas colaborativas y de control de versiones.
+  \item Conocer, practicar y dominar Metodologías Ágiles de desarrollo de software.
+\end{itemize}
+\bigskip
+
+Y las actividades a realizar en el mismo son las que se describen a continuación:
+\begin{itemize}
+  \item Revisión bibliográfica y estado del arte.
+  \item Desarrollar una herramienta de línea de comandos escrita en Node.js que permita automatizar tareas relacionadas con repositorios de GitHub:
+  \begin{itemize}
+    \item Autenticación con GitHub.
+    \item Listar organizaciones, asignaciones y repositorios de GitHub del usuario.
+    \item Automatizar la descarga de repositorios.
+    \item Automatizar la ejecución de scripts en los repositorios (TDD, creación de entorno, evaluación de código...).
+    \item Recopilar la información obtenida de la automatización de tareas y presentarla al usuario (PDF, HTML...).
+  \end{itemize}
+  \item Redacción de la memoria.
+  \item Preparación de la presentación oral.
 \end{itemize}
 
 %---------------------------------------------------------------------------------
-\section{Sección Tres}
+\section{Tecnología usada}
 \label{1:sec:3}
+ 
+Para llevar a cabo el desarrollo de esta herramienta se planteó realizar el desarrollo en \ceis{Node.js}, creando una librería modular que se pudiese instalar mediante el gestor de paquetes de Node.js (NPM).
 
-Bla, bla, bla
-
-%---------------------------------------------------------------------------------
-\section{Sección Cuatro}
-\label{1:sec:4}
-
-Bla, bla, bla
-
-%------------------------------------------------------------------------------
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!htb]
-   \centering
-   \includegraphics[width=0.5\linewidth]{images/arbolbinario}
-   \caption{Ejemplo de Figura}
-   \label{}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.3\textwidth]{images/nodejs-logo}
+\end{center}
 \end{figure}
-%------------------------------------------------------------------------------
 
+Además, se ha hecho uso de otras tecnologías enumeradas a continuación:
+\begin{itemize}
+  \item NPM            \includegraphics[width=0.15\textwidth]{images/npm}
+  \item GitHub         \includegraphics[width=0.1\textwidth]{images/github}
+  \item GitBook        \includegraphics[width=0.3\textwidth]{images/gitbook}
+  \item Travis-CI      \includegraphics[width=0.3\textwidth]{images/travis-ci-logo}
+\end{itemize}
