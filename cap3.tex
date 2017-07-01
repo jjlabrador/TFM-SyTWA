@@ -7,33 +7,296 @@
 Finalizada la etapa de desarrollo del Trabajo de Fin de Máster, se procede a describir la herramienta implementada.
 
 
-La herramienta se ha denominado ghhell, abreviatura de 'GitHub Shell'. Se ha publicado en NPM[Enlace] para su fácil distribución e instalación.
+La herramienta se ha denominado ghhell, abreviatura de 'GitHub Shell'. Se ha publicado en NPM\cite{NPM} para su fácil distribución e instalación:
 
-Las funcionalidades implementadas en ghshell, se describen a continuación:
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{images/npm1}
+\caption{Página del gestor de paquetes NPM}
+\label{fig:npm}
+\end{center}
+\end{figure}
+
+Las funcionalidades implementadas en ghshell, se describen a continuación.
+
+%---------------------------------------------------------------------------------
+\section{Funcionalidades requeridas}
+\label{3:sec:1}
+
+%------------------------------------------------------------------------------------------------------------
+\subsection{Autenticación con GitHub}
+\label{subsec:3.1.1}
+    
+    Una vez que el usuario se autentifica con GitHub, se genera un token personal, que se usa posteriormente para acceder a la API de Github. Este token se almacena cifrado en el equipo del usuario, por lo que las siguientes ocasiones que utilice la herramienta no hará falta que vuelva a iniciar sesión:
+        
+        \begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell1}
+		\caption{Login de usuario}
+		\label{fig:ghshell1}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.6\textwidth]{images/ghshell2-1}
+		\caption{Usuario autenticado}
+		\label{fig:ghshell2-1}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/ghshell2-3}
+		\caption{Token personal en GitHub}
+		\label{fig:ghshell2-3}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.6\textwidth]{images/ghshell2-4}
+		\caption{Login automático una vez generado el token}
+		\label{fig:ghshell2-4}
+		\end{center}
+		\end{figure}
+		
+	Si el usuario cierra sesión en la herramienta, se eliminará el token en GitHub y en el equipo:
+	
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.6\textwidth]{images/ghshell2-2}
+		\caption{Logout de usuario}
+		\label{fig:ghshell2-2}
+		\end{center}
+		\end{figure}
+
+%------------------------------------------------------------------------------------------------------------
+\subsection{Listar organizaciones, asignaciones y repositorios de GitHub del usuario}
+\label{subsec:3.1.2}   
+    
+    Con el comando 'orgs -l', se puede listar las organizaciones del usuario y usando 'repos -l', se listarán los repositorios del usuario. También se puede acceder 'virtualmente' a las organizaciones y listar los repositorios que contiene, así como las asignaciones.
+\bigskip
+
+    NOTA: se puede consultar toda la información referente a los comandos del programa en el Apéndice 2.
+        
+        \begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/ghshell3}
+		\caption{Lista de organizaciones del usuario}
+		\label{fig:ghshell3}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/ghshell4}
+		\caption{Lista de repositorios de una organización}
+		\label{fig:ghshell4}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/ghshell5}
+		\caption{Asignaciones dentro de otra organización}
+		\label{fig:ghshell5}
+		\end{center}
+		\end{figure}
+		
+	También es posible acceder 'virtualmente' a los repositorios y realizar acciones sobre ellos:
+	
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/ghshell5-1}
+		\caption{Acceso a un repositorio de una organización}
+		\label{fig:ghshell5-1}
+		\end{center}
+		\end{figure}
+
+%------------------------------------------------------------------------------------------------------------
+\subsection{Automatizar la descarga de repositorios}
+\label{subsec:3.1.3}  
+        	
+    En función del contexto dónde nos encontremos dentro de la herramienta, podremos:
+    \begin{itemize}
+    	\item Clonar el repositorio en el que nos encontremos.
+    	\item Clonar un repositorio determinado.
+	    \item Clonar todos los repositorios que coincidan con una determinada expresión regular.
+	    \item Clonar todos los repositorios de una asignación que coincidan con una determinada expresión
+    \end{itemize}
+    
+    El clonado se realiza de manera asíncrona, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). Se puede observar el estado de la clonación revisando el fichero de log que se genera: \textless nombre-repositorio \textgreater -clone.log.
+    
+    	\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/ghshell6-3}
+		\caption{Clonado del repositorio donde nos encontramos}
+		\label{fig:ghshell6-3}
+		\end{center}
+		\end{figure}	
+
+    Si clonamos repositorios que pertenece a una organización, se creará una carpeta con el nombre de la organización y en su interior se guardarán los repositorios clonados.
+    		
+	Además, si clonamos repositorios que pertenecen a una asignación, también se creará una carpeta con el nombre de la asignación que los contendrá.
+	
+        \begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/ghshell6-1}
+		\caption{Clonado de asignaciones que coinciden con una expresión regular}
+		\label{fig:ghshell6-1}
+		\end{center}
+		\end{figure}	
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell6-2}
+		\caption{Resultado del clonado}
+		\label{fig:ghshell6-2}
+		\end{center}
+		\end{figure}
+	
+%------------------------------------------------------------------------------------------------------------
+\subsection{Automatizar la ejecución de scripts en los repositorios}
+\label{subsec:3.1.3} 
+	    
+    En función del contexto donde nos encontremos dentro de la herramienta, podremos:
+    \begin{itemize}
+    	\item Ejecutar un script en el repositorio en el que nos encontremos.
+    	\item Ejecutar un script en un determinado repositorio.
+	    \item Ejecutar un script en todos los repositorios que coincidan con una determinada expresión regular.
+	    \item Ejecutar un script en todos los repositorios de una asignación coincidan con una determinada expresión regular.
+    \end{itemize}
+    
+	La ruta del fichero del script puede ser absoluta o relativa. Estos scripts puede ser de cualquier tipo: TDD, creación de entorno, evaluación de código...
+\bigskip
+
+	La ejecución de cada script se ejecuta en un proceso hijo independiente pero, a diferencia del clonado, el script se ejecuta línea a línea de manera síncrona. Se puede observar el estado de la ejecución del script y los resultados revisando el fichero de log que se genera: \textless nombre-repositorio \textgreater - \textless nombre-script \textgreater .log
+    	
+    	\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/ghshell7-3}
+		\caption{Ejecución del script 'install.sh' en el repositorio actual}
+		\label{fig:ghshell7-3}
+		\end{center}
+		\end{figure}
+		
+        \begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/ghshell7-1}
+		\caption{Ejecución del script 'install.sh' en asignaciones que coinciden con una expresión regular}
+		\label{fig:ghshell7-1}
+		\end{center}
+		\end{figure}	
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell7-2}
+		\caption{Resultado de la ejecución del script 'install.sh'}
+		\label{fig:ghshell7-2}
+		\end{center}
+		\end{figure}
+		
+%------------------------------------------------------------------------------------------------------------
+\subsection{Recopilar la información obtenida de la automatización de tareas}
+\label{subsec:3.1.4}
+
+    Una vez ejecutados los scripts necesarios para evaluar un determinado repositorio, es posible generar un GitBook con el resultado de la ejecución de los mismos. Este libro se genera en formato PDF y en HTML.
+\bigskip
+    
+    En función del contexto dónde nos encontremos dentro de la herramienta, podremos:
+    \begin{itemize}
+    	\item Crear un GitBook en el repositorio en el que nos encontremos.
+    	\item Crear un GitBook en un determinado repositorio.
+	    \item Crear un GitBook en todos los repositorios que coincidan con una determinada expresión regular.
+	    \item Crear un GitBook en todos los repositorios de una asignación coincidan con una determinada expresión regular.
+    \end{itemize}
+        
+        \begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/ghshell8-3}
+		\caption{Creación del Gitbook en el repositorio actual}
+		\label{fig:ghshell8-3}
+		\end{center}
+		\end{figure}
+		
+        \begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/ghshell8-1}
+		\caption{Creación del Gitbook en asignaciones que coinciden con una expresión regular}
+		\label{fig:ghshell8-1}
+		\end{center}
+		\end{figure}	
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-2}
+		\caption{Resultado de la creación del Gitbook}
+		\label{fig:ghshell8-2}
+		\end{center}
+		\end{figure}
+		
+        		        		[ Imagen HTML]
+        		        		        		[ Imagen PDF]
+\newpage
+%---------------------------------------------------------------------------------
+\section{Funcionalidades extra}
+\label{3:sec:2}
+
+Además de las funcionales solicitadas en este Trabajo de Fin de Máster, se han añadido una serie de funcionalidades extra que, a pesar de no ser requeridas, brindan al usuario de una mejor experiencia de uso del programa:
 
 \begin{itemize}
-    \item Autenticación con GitHub.
-        		[ Imagen ]
-    \item Listar organizaciones, asignaciones y repositorios de GitHub del usuario.
-        		[ Imagen ]
-    \item Automatizar la descarga de repositorios.
-        		[ Imagen ]
-    \item Automatizar la ejecución de scripts en los repositorios (TDD, creación de entorno, evaluación de código...).
-        		[ Imagen ]
-    \item Recopilar la información obtenida de la automatización de tareas y presentarla al usuario (PDF, HTML...).
-        		[ Imagen ]
+	\item Autocompletado de los comandos disponibles en función del contexto donde nos encontremos (nivel principal, organización o repositorio.
+	\item Opción de ayuda que muestra la descripción de los comandos y cómo se utilizan. Esta ayuda varía dependiendo del contexto donde nos encontremos.
+	\item Opción de visualizar el directorio de trabajo donde se ha ejecutado el programa. Útil para determinar rutas relativas de los scripts que se desean ejecutar.
+	\item Opción para conocer el propietario de cada repositorio. En el caso de que el repositorio pertenezca a una organización, mostrará los contribuyentes de ese repositorio.
 \end{itemize}
 
+NOTA: se puede consultar toda la información referente a los comandos del programa en el Apéndice 2.
 
 %---------------------------------------------------------------------------------
 \section{Problemas encontrados y soluciones}
-\label{3:sec:1}
+\label{3:sec:3}
 
-Asincronía, etc.
+A continuación se detallan los problemas encontrados durante la implementación de la herramienta y las soluciones encontradas para los mismos:
+
+%---------------------------------------------------------------------------------
+\subsection{Asincronía}
+\label{subsec:3.3.1}
+
+Una de las características más importantes del lenguaje Node.js es la asincronía. Usa un modelo de operaciones de entrada/salida sin bloqueo y orientado a eventos, que lo hace ligero y eficiente. Sin embargo, algunas acciones que debía realizar esta herramienta debían de ser síncronas. Ej: login del usuario y ejecución de scripts.
+\bigskip
+
+{\normalsize {\bfseries Solución}}
+\bigskip
+
+La solución a este comportamiento pasó por realizar un amplio estudio de la documentación para usar mecanismos que permitieran bloquear la ejecución de la herramienta en las partes que deseábamos. Los mecanismos usados han sido:
+
+\begin{itemize}
+	\item Funciones síncronas del propio lenguaje.
+	\item Promesas
+	\item Métodos async/await
+	\item Librerías con métodos implementados de manera síncrona.
+\end{itemize}
+
+%---------------------------------------------------------------------------------
+\subsection{Autocompletado de comandos}
+\label{subsec:3.3.2}
+
+Para el manejo de los flujos de lectura y escritura de la herramienta, se ha utilizado la interfaz nativa de Node.js (Readline). Esta interfaz provee de una función de autocompletado para el texto que escribe el usuario.
+
+Sin embargo, sólo funciona con la primera palabra (comando) que escribe. Tras investigar al respecto y buscar posibles librerías alternativas, no existía ninguna solución que corrigiera este comportamiento.
+\bigskip
+
+{\normalsize {\bfseries Solución}}
+\bigskip
+
+Realizando numerosas pruebas, se halló una manera propia de conseguir completar más de un comando en la misma línea. Cuando realice los test de aceptación pertinentes requeridos por la comunidad de Node, solicitaré un Pull Request a su repositorio con esta mejora.
+
 
 %---------------------------------------------------------------------------------
 \section{Perfil del usuario de ghshell}
-\label{3:sec:2}
+\label{3:sec:4}
 
 El uso de ghshell está especialmente dirigido a un determinado grupo de profesores: nos referimos al perfil de un profesor, principalmente docente en alguna rama de Ingeniería, con conocimientos avanzados en programación y en herramientas de control de versiones.
 
