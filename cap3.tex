@@ -246,12 +246,83 @@ Las funcionalidades implementadas en ghshell, se describen a continuación.
 Además de las funcionales solicitadas en este Trabajo de Fin de Máster, se han añadido una serie de funcionalidades extra que, a pesar de no ser requeridas, brindan al usuario de una mejor experiencia de uso del programa:
 
 \begin{itemize}
-	\item Autocompletado de los comandos disponibles en función del contexto donde nos encontremos (nivel principal, organización o repositorio.
-	\item Opción de ayuda que muestra la descripción de los comandos y cómo se utilizan. Esta ayuda varía dependiendo del contexto donde nos encontremos.
+	\item Autocompletado de los comandos disponibles, pulsando tabulador, en función del contexto donde nos encontremos (nivel principal, organización o repositorio:
+	
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/tab1-1}
+		\caption{Autocompletado de comandos}
+		\label{fig:tab1-1}
+		\end{center}
+		\end{figure}
+	
+	
+	Además, también es posible autocompletar los nombres de las organizaciones y repositorios, haciendo mucho más fácil su escritura:
+	
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/tab1-2}
+		\caption{Autocompletado de organizaciones}
+		\label{fig:tab1-1}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/tab1-3}
+		\caption{Autocompletado de repositorios}
+		\label{fig:tab1-1}
+		\end{center}
+		\end{figure}
+	
+	\item Opción de ayuda que muestra la descripción de los comandos y cómo se utilizan. Esta ayuda varía dependiendo del contexto donde nos encontremos:
+	
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/help1-1}
+		\caption{Ayuda global}
+		\label{fig:help1-1}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/help1-2}
+		\caption{Ayuda en el contexto de organización}
+		\label{fig:help1-2}
+		\end{center}
+		\end{figure}
+	
 	\item Opción de visualizar el directorio de trabajo donde se ha ejecutado el programa. Útil para determinar rutas relativas de los scripts que se desean ejecutar.
+	
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/pwd}
+		\caption{Directorio actual de trabajo}
+		\label{fig:pwd}
+		\end{center}
+		\end{figure}
+	
+	
 	\item Opción para conocer el propietario de cada repositorio. En el caso de que el repositorio pertenezca a una organización, mostrará los contribuyentes de ese repositorio.
 \end{itemize}
 
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.5\textwidth]{images/owner1-1}
+		\caption{Propietario del repositorio}
+		\label{fig:owner1-1}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/owner1-2}
+		\caption{Contribuyentes del repositorio}
+		\label{fig:owner1-2}
+		\end{center}
+		\end{figure}
+	
 NOTA: se puede consultar toda la información referente a los comandos del programa en el Apéndice 2.
 
 %---------------------------------------------------------------------------------
@@ -283,7 +354,7 @@ La solución a este comportamiento pasó por realizar un amplio estudio de la do
 \subsection{Autocompletado de comandos}
 \label{subsec:3.3.2}
 
-Para el manejo de los flujos de lectura y escritura de la herramienta, se ha utilizado la interfaz nativa de Node.js (Readline). Esta interfaz provee de una función de autocompletado para el texto que escribe el usuario.
+Para el manejo de los flujos de lectura y escritura estándar de la herramienta, se ha utilizado la interfaz nativa de Node.js (Readline). Esta interfaz provee de una función de autocompletado para el texto que escribe el usuario.
 
 Sin embargo, sólo funciona con la primera palabra (comando) que escribe. Tras investigar al respecto y buscar posibles librerías alternativas, no existía ninguna solución que corrigiera este comportamiento.
 \bigskip
