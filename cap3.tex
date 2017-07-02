@@ -7,7 +7,7 @@
 Finalizada la etapa de desarrollo del Trabajo de Fin de Máster, se procede a describir la herramienta implementada.
 
 
-La herramienta se ha denominado ghhell, abreviatura de 'GitHub Shell'. Se ha publicado en NPM\cite{NPM} para su fácil distribución e instalación:
+La herramienta se ha denominado \verb|ghhell|, abreviatura de 'GitHub Shell'. Se ha publicado en NPM\cite{URL:NPM} para su fácil distribución e instalación:
 
 \begin{figure}[H]
 \begin{center}
@@ -17,7 +17,7 @@ La herramienta se ha denominado ghhell, abreviatura de 'GitHub Shell'. Se ha pub
 \end{center}
 \end{figure}
 
-Las funcionalidades implementadas en ghshell, se describen a continuación.
+Las funcionalidades implementadas en \verb|ghshell|, se describen a continuación.
 
 %---------------------------------------------------------------------------------
 \section{Funcionalidades requeridas}
@@ -75,7 +75,9 @@ Las funcionalidades implementadas en ghshell, se describen a continuación.
 \subsection{Listar organizaciones, asignaciones y repositorios de GitHub del usuario}
 \label{subsec:3.1.2}   
     
-    Con el comando 'orgs -l', se puede listar las organizaciones del usuario y usando 'repos -l', se listarán los repositorios del usuario. También se puede acceder 'virtualmente' a las organizaciones y listar los repositorios que contiene, así como las asignaciones.
+    Con el comando \verb|'orgs -l'|, se puede listar las organizaciones del usuario y usando \verb|'repos -l'|, se listarán los repositorios del usuario. También se puede acceder 'virtualmente' a las organizaciones y listar los repositorios que contiene, así como las asignaciones.
+    
+    Las asignaciones son un conjunto de repositorios que corresponden a una tarea asignada por los profesores a los alumnos.
 \bigskip
 
     NOTA: se puede consultar toda la información referente a los comandos del programa en el Apéndice 2.
@@ -126,7 +128,7 @@ Las funcionalidades implementadas en ghshell, se describen a continuación.
 	    \item Clonar todos los repositorios de una asignación que coincidan con una determinada expresión
     \end{itemize}
     
-    El clonado se realiza de manera asíncrona, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). Se puede observar el estado de la clonación revisando el fichero de log que se genera: \textless nombre-repositorio \textgreater -clone.log.
+    El clonado se realiza de manera asíncrona, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). Se puede observar el estado de la clonación revisando el fichero de log que se genera cuyo nombre sigue el formato: \textless \verb|nombre-repositorio|\textgreater \verb|-clone.log|.
     
     	\begin{figure}[H]
 		\begin{center}
@@ -136,7 +138,7 @@ Las funcionalidades implementadas en ghshell, se describen a continuación.
 		\end{center}
 		\end{figure}	
 
-    Si clonamos repositorios que pertenece a una organización, se creará una carpeta con el nombre de la organización y en su interior se guardarán los repositorios clonados.
+    Si clonamos repositorios que pertenecen a una organización, se creará una carpeta con el nombre de la organización y en su interior se guardarán los repositorios clonados.
     		
 	Además, si clonamos repositorios que pertenecen a una asignación, también se creará una carpeta con el nombre de la asignación que los contendrá.
 	
@@ -246,7 +248,7 @@ Las funcionalidades implementadas en ghshell, se describen a continuación.
 Además de las funcionales solicitadas en este Trabajo de Fin de Máster, se han añadido una serie de funcionalidades extra que, a pesar de no ser requeridas, brindan al usuario de una mejor experiencia de uso del programa:
 
 \begin{itemize}
-	\item Autocompletado de los comandos disponibles, pulsando tabulador, en función del contexto donde nos encontremos (nivel principal, organización o repositorio:
+	\item Autocompletado de los comandos disponibles, pulsando tabulador, en función del contexto donde nos encontremos (nivel principal, organización o repositorio):
 	
 		\begin{figure}[H]
 		\begin{center}
@@ -335,7 +337,7 @@ A continuación se detallan los problemas encontrados durante la implementación
 \subsection{Asincronía}
 \label{subsec:3.3.1}
 
-Una de las características más importantes del lenguaje Node.js es la asincronía. Usa un modelo de operaciones de entrada/salida sin bloqueo y orientado a eventos, que lo hace ligero y eficiente. Sin embargo, algunas acciones que debía realizar esta herramienta debían de ser síncronas. Ej: login del usuario y ejecución de scripts.
+Una de las características más importantes del lenguaje JavaScript es la asincronía. Usa un modelo de operaciones de entrada/salida sin bloqueo y orientado a eventos, que lo hace ligero y eficiente. Sin embargo, algunas acciones que debía realizar esta herramienta debían de ser síncronas. Ejemplos son el login del usuario y ejecución de scripts.
 \bigskip
 
 {\normalsize {\bfseries Solución}}
@@ -369,6 +371,6 @@ Realizando numerosas pruebas, se halló una manera propia de conseguir completar
 \section{Perfil del usuario de ghshell}
 \label{3:sec:4}
 
-El uso de ghshell está especialmente dirigido a un determinado grupo de profesores: nos referimos al perfil de un profesor, principalmente docente en alguna rama de Ingeniería, con conocimientos avanzados en programación y en herramientas de control de versiones.
+El uso de \verb|ghshell| está especialmente dirigido a un determinado grupo de profesores: nos referimos al perfil de un profesor, principalmente docente en alguna rama de Ingeniería, con conocimientos avanzados en programación y en herramientas de control de versiones.
 
-No obstante, ya que la curva de aprendizaje de ghshell no es excesiva y dado que el uso de las herramientas de control de versiones no se limita exclusivamente a repositorios de código fuente, se puede extender su uso para el resto de profesorado y usuarios con otros roles. Basta con tener claras unas nociones básicas de informática, junto con la lectura y asimilación previa de la documentación de la herramienta.
+No obstante, ya que la curva de aprendizaje de \verb|ghshell| no es excesiva y dado que el uso de las herramientas de control de versiones no se limita exclusivamente a repositorios de código fuente, se puede extender su uso para el resto de profesorado y usuarios con otros roles. Basta con tener claras unas nociones básicas de informática, junto con la lectura y asimilación previa de la documentación de la herramienta.
