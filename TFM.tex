@@ -75,6 +75,7 @@
 \newcommand{\ceit}[1]  
   {\index{#1}{#1}}
   
+  
 %%%%%%%%%%%%%%%%% Creamos un entorno para listar código fuente %%%%%%%%%%%%%%%
 \newenvironment{sourcecode}
 {\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
@@ -98,6 +99,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\renewcommand{\thepage}{\roman{page}}
+\setcounter{page}{1}
+
 \renewcommand\listtablename{Índice de Tablas}      % Estos comandos (al haber cargado babel)
 \renewcommand\listfigurename{Índice de Figuras}    % Han de ir inmediatamente después del begin{document}
 
@@ -299,8 +303,7 @@ Console, CLI, Shell, Terminal, Node.js, GitHub, Correction, Automation
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Numeracion en romanos
-\renewcommand{\thepage}{\roman{page}}
-\setcounter{page}{1}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
