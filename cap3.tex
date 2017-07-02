@@ -5,9 +5,10 @@
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Finalizada la etapa de desarrollo del Trabajo de Fin de Máster, se procede a describir la herramienta implementada.
+\bigskip
 
-
-La herramienta se ha denominado \verb|ghhell|, abreviatura de 'GitHub Shell'. Se ha publicado en NPM\cite{URL:NPM} para su fácil distribución e instalación:
+La herramienta se ha denominado {\bfseries \verb|ghhell|}, abreviatura de {\it GitHub Shell}. Se ha publicado en NPM\cite{URL:NPM} para su fácil distribución e instalación:
+\bigskip
 
 \begin{figure}[H]
 \begin{center}
@@ -17,7 +18,10 @@ La herramienta se ha denominado \verb|ghhell|, abreviatura de 'GitHub Shell'. Se
 \end{center}
 \end{figure}
 
-Las funcionalidades implementadas en \verb|ghshell|, se describen a continuación.
+Las funcionalidades implementadas en \verb|ghshell|, se describen a continuación. 
+\bigskip
+
+{\bfseries NOTA}: se puede consultar toda la información detallada referente a los comandos del programa en el Apéndice \ref{subsec:b.2.2}.
 
 %---------------------------------------------------------------------------------
 \section{Funcionalidades requeridas}
@@ -27,7 +31,10 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 \subsection{Autenticación con GitHub}
 \label{subsec:3.1.1}
     
-    Una vez que el usuario se autentifica con GitHub, se genera un token personal, que se usa posteriormente para acceder a la API de Github. Este token se almacena cifrado en el equipo del usuario, por lo que las siguientes ocasiones que utilice la herramienta no hará falta que vuelva a iniciar sesión:
+    Una vez que el usuario se autentifica con GitHub, se genera un \ceit{\ref{apend1:token}} personal, que se usa posteriormente para acceder a la \ceit{\ref{apend1:api}} de Github. 
+\bigskip
+   
+   Este token se almacena cifrado en el equipo del usuario, por lo que las siguientes ocasiones que utilice la herramienta no hará falta que vuelva a iniciar sesión:
         
         \begin{figure}[H]
 		\begin{center}
@@ -71,17 +78,17 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 		\end{center}
 		\end{figure}
 
+\newpage
 %------------------------------------------------------------------------------------------------------------
 \subsection{Listar organizaciones, asignaciones y repositorios de GitHub del usuario}
 \label{subsec:3.1.2}   
     
-    Con el comando \verb|'orgs -l'|, se puede listar las organizaciones del usuario y usando \verb|'repos -l'|, se listarán los repositorios del usuario. También se puede acceder 'virtualmente' a las organizaciones y listar los repositorios que contiene, así como las asignaciones.
-    
-    Las asignaciones son un conjunto de repositorios que corresponden a una tarea asignada por los profesores a los alumnos.
+    Con el comando \verb|orgs -l|, se puede listar las organizaciones del usuario y usando \verb|repos -l|, se listarán los repositorios del usuario. 
 \bigskip
-
-    NOTA: se puede consultar toda la información referente a los comandos del programa en el Apéndice 2.
-        
+    
+    Se puede acceder 'virtualmente' a las organizaciones y listar los repositorios que contiene, así como las asignaciones.
+\bigskip
+            
         \begin{figure}[H]
 		\begin{center}
 		\includegraphics[width=0.9\textwidth]{images/ghshell3}
@@ -105,8 +112,10 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 		\label{fig:ghshell5}
 		\end{center}
 		\end{figure}
-		
-	También es posible acceder 'virtualmente' a los repositorios y realizar acciones sobre ellos:
+
+\newpage
+
+	También es posible acceder 'virtualmente' a los repositorios dentro una organización y realizar acciones sobre ellos:
 	
 		\begin{figure}[H]
 		\begin{center}
@@ -125,10 +134,13 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
     	\item Clonar el repositorio en el que nos encontremos.
     	\item Clonar un repositorio determinado.
 	    \item Clonar todos los repositorios que coincidan con una determinada expresión regular.
-	    \item Clonar todos los repositorios de una asignación que coincidan con una determinada expresión
+	    \item Clonar todos los repositorios de una asignación que coincidan con una determinada expresión.
     \end{itemize}
     
-    El clonado se realiza de manera asíncrona, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). Se puede observar el estado de la clonación revisando el fichero de log que se genera cuyo nombre sigue el formato: \textless \verb|nombre-repositorio|\textgreater \verb|-clone.log|.
+    El clonado se realiza de manera \ceit{\ref{apend1:asincrona}}, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). 
+\bigskip
+   
+   Se puede observar el estado de la clonación revisando el fichero de log que se genera cuyo nombre sigue el formato: \textless \verb|nombre-repositorio|\textgreater \verb|-clone.log|.
     
     	\begin{figure}[H]
 		\begin{center}
@@ -137,6 +149,8 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 		\label{fig:ghshell6-3}
 		\end{center}
 		\end{figure}	
+
+\newpage
 
     Si clonamos repositorios que pertenecen a una organización, se creará una carpeta con el nombre de la organización y en su interior se guardarán los repositorios clonados.
     		
@@ -157,7 +171,8 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 		\label{fig:ghshell6-2}
 		\end{center}
 		\end{figure}
-	
+
+\newpage
 %------------------------------------------------------------------------------------------------------------
 \subsection{Automatizar la ejecución de scripts en los repositorios}
 \label{subsec:3.1.3} 
@@ -167,13 +182,19 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
     	\item Ejecutar un script en el repositorio en el que nos encontremos.
     	\item Ejecutar un script en un determinado repositorio.
 	    \item Ejecutar un script en todos los repositorios que coincidan con una determinada expresión regular.
-	    \item Ejecutar un script en todos los repositorios de una asignación coincidan con una determinada expresión regular.
+	    \item Ejecutar un script en todos los repositorios de una asignación que coincidan con una determinada expresión regular.
     \end{itemize}
     
-	La ruta del fichero del script puede ser absoluta o relativa. Estos scripts puede ser de cualquier tipo: TDD, creación de entorno, evaluación de código...
+	La ruta del fichero del script puede ser absoluta o relativa. 
+\bigskip
+	
+	Estos scripts puede ser de cualquier tipo: TDD, creación de entorno, evaluación de código...
 \bigskip
 
-	La ejecución de cada script se ejecuta en un proceso hijo independiente pero, a diferencia del clonado, el script se ejecuta línea a línea de manera síncrona. Se puede observar el estado de la ejecución del script y los resultados revisando el fichero de log que se genera: \textless nombre-repositorio \textgreater - \textless nombre-script \textgreater .log
+	La ejecución de cada script se ejecuta en un proceso hijo independiente pero, a diferencia del clonado, el script se ejecuta línea a línea de manera \ceit{\ref{apend1:sincrona}}. 
+\bigskip
+	
+	Se puede observar el estado de la ejecución del script y los resultados revisando el fichero de log que se genera: \textless \verb|nombre-repositorio|\textgreater \verb|-|\textless \verb|nombre-script|\textgreater \verb|.log|
     	
     	\begin{figure}[H]
 		\begin{center}
@@ -203,7 +224,7 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 \subsection{Recopilar la información obtenida de la automatización de tareas}
 \label{subsec:3.1.4}
 
-    Una vez ejecutados los scripts necesarios para evaluar un determinado repositorio, es posible generar un GitBook con el resultado de la ejecución de los mismos. Este libro se genera en formato PDF y en HTML.
+    Una vez ejecutados los scripts necesarios para evaluar un determinado repositorio, es posible generar un {\bfseries GitBook} con el resultado de la ejecución de los mismos. Este libro se genera en formato PDF y en HTML.
 \bigskip
     
     En función del contexto dónde nos encontremos dentro de la herramienta, podremos:
@@ -230,6 +251,19 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 		\end{center}
 		\end{figure}	
 		
+		
+		Se puede observar el progreso de la creación del libro revisando los ficheros de logs que se generan: \textless \verb|nombre-repositorio|\textgreater \verb|-gitbook_build.out| y \textless \verb|nombre-repositorio|\textgreater \verb|-gitbook_pdf.out|.
+		
+\bigskip
+		Tanto el PDF como el HTML, contarán con las siguientes páginas:
+		
+		\begin{itemize}
+			\item Índice (Tabla de contenidos).
+			\item Introducción: en esta página se copiará el fichero {\it README.md} del repositorio. En caso de que no tuviera ese fichero, se imprimirá un mensaje que indica que el repositorio no tiene fichero README.md.
+			\item Páginas correspondientes a la ejecución de cada script.
+		\end{itemize}
+		
+		
 		\begin{figure}[H]
 		\begin{center}
 		\includegraphics[width=0.7\textwidth]{images/ghshell8-2}
@@ -238,8 +272,53 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 		\end{center}
 		\end{figure}
 		
-        		        		[ Imagen HTML]
-        		        		        		[ Imagen PDF]
+		La carpeta que contiene el libro en HTML se llamará: \newline
+		\textless \verb|nombre-repositorio|\textgreater \verb|_gitbook/|\verb|_book|. 
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-4}
+		\caption{Localización del HTML del Gitbook}
+		\label{fig:ghshell8-4}
+		\end{center}
+		\end{figure}
+		
+		
+		El fichero PDF que se genera se llamará \textless \verb|nombre-repositorio|\textgreater \verb|.pdf|. 
+        		
+        
+        \begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/ghshell8-6}
+		\caption{Indice del PDF generado}
+		\label{fig:ghshell8-6}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-7}
+		\caption{Introducción del PDF generado}
+		\label{fig:ghshell8-7}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-8}
+		\caption{Resultado del clonado del repositorio}
+		\label{fig:ghshell8-8}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-9}
+		\caption{Resultado de la ejecución del script en el repositorio}
+		\label{fig:ghshell8-9}
+		\end{center}
+		\end{figure}        		
+  		
 \newpage
 %---------------------------------------------------------------------------------
 \section{Funcionalidades extra}
@@ -248,7 +327,7 @@ Las funcionalidades implementadas en \verb|ghshell|, se describen a continuació
 Además de las funcionales solicitadas en este Trabajo de Fin de Máster, se han añadido una serie de funcionalidades extra que, a pesar de no ser requeridas, brindan al usuario de una mejor experiencia de uso del programa:
 
 \begin{itemize}
-	\item Autocompletado de los comandos disponibles, pulsando tabulador, en función del contexto donde nos encontremos (nivel principal, organización o repositorio):
+	\item \underline{Autocompletado de los comandos disponibles}, pulsando tabulador, en función del contexto donde nos encontremos (nivel principal, organización o repositorio):
 	
 		\begin{figure}[H]
 		\begin{center}
@@ -277,7 +356,7 @@ Además de las funcionales solicitadas en este Trabajo de Fin de Máster, se han
 		\end{center}
 		\end{figure}
 	
-	\item Opción de ayuda que muestra la descripción de los comandos y cómo se utilizan. Esta ayuda varía dependiendo del contexto donde nos encontremos:
+	\item \underline{Opción de ayuda} que muestra la descripción de los comandos y cómo se utilizan. Esta ayuda varía dependiendo del contexto donde nos encontremos:
 	
 		\begin{figure}[H]
 		\begin{center}
@@ -294,8 +373,16 @@ Además de las funcionales solicitadas en este Trabajo de Fin de Máster, se han
 		\label{fig:help1-2}
 		\end{center}
 		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/help1-3}
+		\caption{Ayuda en el contexto de repositorio}
+		\label{fig:help1-3}
+		\end{center}
+		\end{figure}
 	
-	\item Opción de visualizar el directorio de trabajo donde se ha ejecutado el programa. Útil para determinar rutas relativas de los scripts que se desean ejecutar.
+	\item \underline{Opción de visualizar el directorio de trabajo actual} (donde se ha ejecutado el programa). Útil para determinar rutas relativas de los scripts que se desean ejecutar.
 	
 		\begin{figure}[H]
 		\begin{center}
@@ -306,7 +393,7 @@ Además de las funcionales solicitadas en este Trabajo de Fin de Máster, se han
 		\end{figure}
 	
 	
-	\item Opción para conocer el propietario de cada repositorio. En el caso de que el repositorio pertenezca a una organización, mostrará los contribuyentes de ese repositorio.
+	\item \underline{Opción para conocer el propietario de cada repositorio}. En el caso de que el repositorio pertenezca a una organización, mostrará los contribuyentes de ese repositorio.
 \end{itemize}
 
 		\begin{figure}[H]
@@ -324,9 +411,8 @@ Además de las funcionales solicitadas en este Trabajo de Fin de Máster, se han
 		\label{fig:owner1-2}
 		\end{center}
 		\end{figure}
-	
-NOTA: se puede consultar toda la información referente a los comandos del programa en el Apéndice 2.
 
+\newpage	
 %---------------------------------------------------------------------------------
 \section{Problemas encontrados y soluciones}
 \label{3:sec:3}
@@ -337,7 +423,7 @@ A continuación se detallan los problemas encontrados durante la implementación
 \subsection{Asincronía}
 \label{subsec:3.3.1}
 
-Una de las características más importantes del lenguaje JavaScript es la asincronía. Usa un modelo de operaciones de entrada/salida sin bloqueo y orientado a eventos, que lo hace ligero y eficiente. Sin embargo, algunas acciones que debía realizar esta herramienta debían de ser síncronas. Ejemplos son el login del usuario y ejecución de scripts.
+Una de las características más importantes del lenguaje \ceis{\ref{apend1:js}} es la asincronía. Usa un modelo de operaciones de entrada/salida sin bloqueo y orientado a eventos, que lo hace ligero y eficiente. Sin embargo, algunas acciones que debía realizar esta herramienta debían de ser síncronas. Ejemplos son el login del usuario y ejecución de scripts.
 \bigskip
 
 {\normalsize {\bfseries Solución}}
@@ -346,25 +432,29 @@ Una de las características más importantes del lenguaje JavaScript es la asinc
 La solución a este comportamiento pasó por realizar un amplio estudio de la documentación para usar mecanismos que permitieran bloquear la ejecución de la herramienta en las partes que deseábamos. Los mecanismos usados han sido:
 
 \begin{itemize}
-	\item Funciones síncronas del propio lenguaje.
-	\item Promesas
-	\item Métodos async/await
-	\item Librerías con métodos implementados de manera síncrona.
+	\item \underline{Funciones síncronas del propio lenguaje}.
+	\item \ceit{\ref{apend1:promesa}}.
+	\item Métodos \ceit{\ref{apend1:async-await}}.
+	\item \underline{Librerías} con métodos implementados de manera síncrona.
 \end{itemize}
 
 %---------------------------------------------------------------------------------
 \subsection{Autocompletado de comandos}
 \label{subsec:3.3.2}
 
-Para el manejo de los flujos de lectura y escritura estándar de la herramienta, se ha utilizado la interfaz nativa de Node.js (Readline). Esta interfaz provee de una función de autocompletado para el texto que escribe el usuario.
+Para el manejo de los flujos de lectura y escritura estándar de la herramienta, se ha utilizado la interfaz nativa de Node.js ({\it Readline}). Esta interfaz provee de una función de autocompletado para el texto que escribe el usuario.
+\bigskip
 
-Sin embargo, sólo funciona con la primera palabra (comando) que escribe. Tras investigar al respecto y buscar posibles librerías alternativas, no existía ninguna solución que corrigiera este comportamiento.
+Sin embargo, sólo funciona con la primera palabra (comando) que escribe. 
+\bigskip
+
+Tras investigar al respecto y buscar posibles librerías alternativas, no existía ninguna solución que corrigiera este comportamiento.
 \bigskip
 
 {\normalsize {\bfseries Solución}}
 \bigskip
 
-Realizando numerosas pruebas, se halló una manera propia de conseguir completar más de un comando en la misma línea. Cuando realice los test de aceptación pertinentes requeridos por la comunidad de Node, solicitaré un Pull Request a su repositorio con esta mejora.
+Realizando numerosas pruebas, se halló una manera propia de conseguir completar más de un comando en la misma línea. Cuando realice los test de aceptación pertinentes requeridos por la comunidad de Node, solicitaré un {\bfseries Pull Request} a su repositorio con esta mejora.
 
 
 %---------------------------------------------------------------------------------
@@ -372,5 +462,6 @@ Realizando numerosas pruebas, se halló una manera propia de conseguir completar
 \label{3:sec:4}
 
 El uso de \verb|ghshell| está especialmente dirigido a un determinado grupo de profesores: nos referimos al perfil de un profesor, principalmente docente en alguna rama de Ingeniería, con conocimientos avanzados en programación y en herramientas de control de versiones.
+\bigskip
 
 No obstante, ya que la curva de aprendizaje de \verb|ghshell| no es excesiva y dado que el uso de las herramientas de control de versiones no se limita exclusivamente a repositorios de código fuente, se puede extender su uso para el resto de profesorado y usuarios con otros roles. Basta con tener claras unas nociones básicas de informática, junto con la lectura y asimilación previa de la documentación de la herramienta.

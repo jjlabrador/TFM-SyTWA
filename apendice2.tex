@@ -1,5 +1,5 @@
 El objetivo de esta guía de usuario es proporcionar a los usuarios un ejemplo para la puesta a punto y ejecución de las 
-funcionalidades implementadas en el paquete NPM ghshell durante el Trabajo de Fin de Máster.
+funcionalidades implementadas en el paquete NPM \verb|ghshell| durante el Trabajo de Fin de Máster.
 
 %---------------------------------------------------------------------------------
 \section{Instalación}
@@ -23,7 +23,7 @@ funcionalidades implementadas en el paquete NPM ghshell durante el Trabajo de Fi
 Para poder generar los libros usando Gitbook, son necesarias las siguientes dependencias:
 
 \begin{itemize}
-	\item Paquete de Gitbook (\url{https://www.npmjs.com/package/gitbook-cli}):
+	\item \underline{Paquete de Gitbook} (\url{https://www.npmjs.com/package/gitbook-cli}):
 	
 	Para instalarlo, basta con ejecutar el siguiente comando:
 	
@@ -31,7 +31,7 @@ Para poder generar los libros usando Gitbook, son necesarias las siguientes depe
 		[~]$ npm install -g gitbook-cli
 	\end{verbatim}
 
-	\item Aplicación Calibre (\url{https://calibre-ebook.com/download})
+	\item \underline{Aplicación Calibre} (\url{https://calibre-ebook.com/download})
 	
 	Para instalarla, basta con ejecutar el siguiente comando:
 	
@@ -39,7 +39,7 @@ Para poder generar los libros usando Gitbook, son necesarias las siguientes depe
 		[~]$ sudo aptitude install calibre
 	\end{verbatim}
 	
-	NOTA: en algunas distribuciones GNU/Linux, node es instalado como nodejs, por lo que es necesario crear un enlace simbólico:
+	{\bfseries NOTA}: en algunas distribuciones GNU/Linux, node es instalado como nodejs, por lo que es necesario crear un enlace simbólico:
 	
 	\begin{verbatim}
 		[~]$ sudo ln -s /usr/bin/nodejs /usr/bin/node
@@ -51,7 +51,7 @@ Para poder generar los libros usando Gitbook, son necesarias las siguientes depe
 \subsection{Instalación}
 \label{subsec:b.1.3}
 
-Para instalar el paquete ghshell, basta con ejecutar el siguiente comando:
+Para instalar el paquete \verb|ghshell|, basta con ejecutar el siguiente comando:
 
 \begin{verbatim}
 [~]$ npm install -g ghshell
@@ -78,7 +78,7 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 \subsection{Iniciar/Cerrar sesión}
 \label{subsec:b.2.1}
     
-    Iniciar o cerrar sesión. Comandos 'login' y 'logout'. 
+    Iniciar o cerrar sesión. Comandos \verb|login| y \verb|logout|. 
     
     	\begin{verbatim}
 			ghshell > login
@@ -132,7 +132,7 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{center}
 		\end{figure}
 		
-
+\newpage
 %---------------------------------------------------------------------------------
 
 \subsection{Contexto principal}
@@ -141,7 +141,7 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 	Una vez autentificados, en el menú principal podremos hacer las siguientes acciones:
 	
 	\begin{itemize}
-		\item Mostrar la ayuda. Comando 'help'.
+		\item \underline{Mostrar la ayuda}. Comando \verb|help|.
 		
 		\begin{verbatim}
 			ghshell > help
@@ -158,7 +158,7 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 		
 		%-------------------
-		\item Mostrar el directorio de trabajo actual. Comando 'pwd'.
+		\item \underline{Mostrar el directorio de trabajo actual}. Comando \verb|pwd|.
 		
 		\begin{verbatim}
 			ghshell > pwd
@@ -174,10 +174,11 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{center}
 		\end{figure}
 		
-		NOTA: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización o dentro de un repositorio de una organización.
+		{\bfseries NOTA}: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización o dentro de un repositorio de una organización.
+		\newpage
 		
 		%-------------------
-		\item  Listar y acceder a organizaciones. Comando 'orgs'.
+		\item  \underline{Listar y acceder a organizaciones}. Comando \verb|orgs|.
 		
 		\begin{verbatim}
 			ghshell > orgs [-l]
@@ -193,10 +194,10 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{center}
 		\end{figure}
 		
-		El prompt de la consola cambiará para indicarnos que nos encontramos dentro de la organización.
+		El {\it prompt} de la consola cambiará para indicarnos que nos encontramos dentro de la organización.
 		\bigskip
 		
-		Si se ejecuta el comando con la opción '-l', simplemente lista las organizaciones a las que pertenece el usuario.
+		Si se ejecuta el comando con la opción \verb|-l|, simplemente lista las organizaciones a las que pertenece el usuario.
 		
 		\begin{figure}[H]
 		\begin{center}
@@ -205,9 +206,10 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\label{fig:ghshell3}
 		\end{center}
 		\end{figure}
-				
+
+\newpage
 		%-------------------
-		\item  Listar y acceder a repositorios. Comando 'repos'.
+		\item  \underline{Listar y acceder a repositorios}. Comando \verb|repos|.
 		
 		\begin{verbatim}
 			ghshell > repos [-l] [string | /regexp/]
@@ -224,10 +226,10 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 		
 		
-		El prompt de la consola cambiará para indicarnos que nos encontramos dentro de un repositorio.		
+		El {\it prompt} de la consola cambiará para indicarnos que nos encontramos dentro de un repositorio.		
 		\bigskip
 		
-		Si se ejecuta el comando con la opción '-l', simplemente se listan los repositorios que pertenecen al usuario.
+		Si se ejecuta el comando con la opción \verb|-l|, simplemente se listan los repositorios que pertenecen al usuario.
 		
 		\begin{figure}[H]
 		\begin{center}
@@ -236,7 +238,9 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\label{fig:repos1-2}
 		\end{center}
 		\end{figure}
-		
+
+\newpage
+	
 		Si se especifica como argumento un string o expresión regular, se mostrarán los repositorios que coincidan con ese argumento:
 		
 		\begin{figure}[H]
@@ -248,7 +252,7 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 		
 		
-		NOTA: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización.
+		{\bfseries NOTA}: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización:
 		
 		
 		\begin{figure}[H]
@@ -276,7 +280,7 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}	
 		
 		%-------------------
-		\item  Clonar repositorios. Comando 'clone'.
+		\item  \underline{Clonar repositorios}. Comando \verb|clone|.
 		
 		\begin{verbatim}
 			ghshell > clone string | /regexp/
@@ -301,7 +305,10 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 		
 		
-		El clonado se realiza de manera asíncrona, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). Se puede observar el estado de la clonación revisando el fichero de log que se genera: \textless nombre-repositorio\textgreater -clone.log.:
+		El clonado se realiza de manera {\bfseries asíncrona}, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). 
+\bigskip
+		
+		Se puede observar el estado de la clonación revisando el fichero de log que se genera: \textless \verb|nombre-repositorio|\textgreater \verb|-clone.log|.:
 		
 		\begin{figure}[H]
 		\begin{center}
@@ -311,31 +318,35 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{center}
 		\end{figure}
 		
-		
+\newpage		
 		Los fichero de log muestran la información del clonado. Se ha añadido una huella de tiempo para tener un control más exacto sobre cuándo ocurre cada evento:
 		
 		\input{clone-log.tex}
-		
+
+\newpage		
 		%-------------------		
-		\item  Salir del programa. Comando 'exit'.
+		\item  \underline{Salir del programa}. Comando \verb|exit|.
 		
+		\bigskip
 		Causa el cierre ordenado del programa.
-		
-		NOTA: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización o dentro de un repositorio de una organización. 
+		\bigskip
+				
+		{\bfseries NOTA}: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización o dentro de un repositorio de una organización. 
 		
 	\end{itemize}
 
 \subsection{Contexto de organización}
 \label{subsec:b.2.2}
 
-	Los comandos 'pwd', 'repos', 'clone' y 'exit' tienen el mismo comportamiento que en el contexto principal. 
-	\bigskip
-	Además, en el caso del comando 'clone', se creará una carpeta con el nombre de la organización en la que nos encontremos y en ella se guardarán todos los repositorios clonados.
+	Los comandos \verb|pwd|, \verb|repos|, \verb|clone| y \verb|exit| tienen el mismo comportamiento que en el contexto principal. 
+\bigskip
+
+	Además, en el caso del comando \verb|clone|, se creará una carpeta con el nombre de la organización en la que nos encontremos y en ella se guardarán todos los repositorios clonados.
 	
 	%-------------------
 \begin{itemize}
 
-	\item Mostrar la ayuda. Comando 'help'.
+	\item \underline{Mostrar la ayuda}. Comando \verb|help|.
 		
 		\begin{verbatim}
 			ghshell > help
@@ -350,15 +361,17 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\label{fig:help1-2}
 		\end{center}
 		\end{figure}
-	
+
+\newpage	
 	%-------------------	
-	\item Salir del contexto actual. Comando 'back'.
+	\item \underline{Salir del contexto actual}. Comando \verb|back|.
 	
 		\begin{verbatim}
 			ghshell > back
 		\end{verbatim}
 		
-		Si nos encontramos en un repositorio propio o en una organización, regresamos al contexto principal. Si nos encontramos dentro de un repositorio de una organización, regresamos al contexto de la organización.
+		Si nos encontramos en un repositorio propio o en una organización, regresamos al contexto principal. 
+		Si nos encontramos dentro de un repositorio de una organización, regresamos al contexto de la organización.
 		
 		\begin{figure}[H]
 		\begin{center}
@@ -377,7 +390,7 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 		
 	%-------------------	
-	\item Ejecutar un script determinado. Comando 'script'.
+	\item \underline{Ejecutar un script determinado}. Comando \verb|script|.
 	
 		\begin{verbatim}
 			ghshell > script <file> /regexp/
@@ -395,8 +408,14 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{center}
 		\end{figure}
 		
+\newpage
 	
-	La ejecución de cada script se ejecuta en un proceso hijo independiente pero, a diferencia del clonado, el script se ejecuta línea a línea de manera síncrona. Se puede observar el estado de la ejecución del script y los resultados revisando el fichero de log que se genera: \textless nombre-repositorio \textgreater - \textless nombre-script \textgreater .log
+	La ejecución de cada script se ejecuta en un proceso hijo independiente pero, a diferencia del clonado, el script se ejecuta línea a línea de manera {\bfseries síncrona}. 
+\bigskip
+	
+	Se puede observar el estado de la ejecución del script y los resultados revisando el fichero de log que se genera:
+	\bigskip
+	\textless \verb|nombre-repositorio|\textgreater \verb|-|\textless \verb|nombre-script|\textgreater \verb|.log|
 	
 		\begin{figure}[H]
 		\begin{center}
@@ -407,13 +426,14 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 	
 	%-------------------
-	\item Exportar resultados. Comando 'book'.
+	\item \underline{Exportar resultados}. Comando \verb|book|.
 	
 		\begin{verbatim}
 			ghshell > book string | /regexp/
 		\end{verbatim}
 	
-	Este comando genera un Gitbook con los resultados de todos los scripts ejecutados sobre los repositorios. Este libro se genera en formato PDF y en HTML.
+	Este comando genera un {\bfseries Gitbook} con los resultados de todos los scripts ejecutados sobre los repositorios. Este libro se genera en formato PDF y en HTML.
+\bigskip
 	
 	Al especificar un string o expresión regular, se creará el libro por cada repositorios que coincida con la expresión regular indicada.
 	
@@ -426,22 +446,109 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 		
 	
-	La creación del libro se realiza de manera asíncrona, por lo que se puede seguir trabajando mientras se genera. Se puede observar el estado de la creación del libro y su exportación a PDF revisando los ficheros de logs que se generan:
-	\textless nombre-repositorio \textgreater -gitbook{\_}build.out y \textless nombre-repositorio \textgreater -gitbook{\_}pdf.out.
+	La creación del libro se realiza de manera {\bfseries asíncrona}, por lo que se puede seguir trabajando mientras se genera. 
+\bigskip
+	
+	Se puede observar el estado de la creación del libro y su exportación a PDF revisando los ficheros de logs que se generan:
+\bigskip
+
+	\textless \verb|nombre-repositorio|\textgreater \verb|-gitbook_build.out| y 
+\bigskip
+	
+	\textless \verb|nombre-repositorio|\textgreater \verb|-gitbook_pdf.out|.
+	\bigskip
 	\bigskip
 	
-    La carpeta que contiene el libro en HTML se llamará \textless nombre-repositorio\textgreater {\_}gitbook. El fichero PDF se llamará \textless nombre-repositorio\textgreater .pdf.
+	Tanto el PDF como el HTML contará con las siguientes páginas:
+		
+		\begin{itemize}
+			\item Índice (Tabla de contenidos).
+			\item Introducción: en esta página se copiará el fichero {\it README.md} del repositorio. En caso de que no tuviera ese fichero, se imprimirá un mensaje que indica que el repositorio no tiene fichero README.md.
+			\item Páginas correspondientes a la ejecución de cada script.
+		\end{itemize}
+		
+		
+    La carpeta que contiene el libro en HTML se llamará:
+    \bigskip
+     
+	\textless \verb|nombre-repositorio|\textgreater \verb|_gitbook/_book|. 
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-4}
+		\caption{Localización del HTML del Gitbook}
+		\label{fig:ghshell8-4}
+		\end{center}
+		\end{figure}
+
+\bigskip
+
+	Para visualizar el libro en formato HTML, basta con ejecutar el comando:
+	
+	\begin{verbatim}
+		[~]$ gitbook serve
+	\end{verbatim}
+	
+	Se arrancará un servidor web y, accediendo a la página que nos indique la consola, se podrá leer el libro:
 	
 		\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.7\textwidth]{images/book1-2}
-		\caption{Directorios y ficheros generados del Gitbook}
-		\label{fig:book1-2}
+		\includegraphics[width=0.9\textwidth]{images/ghshell8-5}
+		\caption{Visualizar libro en HTML (I)}
+		\label{fig:ghshell8-5}
 		\end{center}
 		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-10}
+		\caption{Visualizar libro en HTML (II)}
+		\label{fig:ghshell8-10}
+		\end{center}
+		\end{figure}
+
+\newpage		
+		
+	El fichero PDF generado se llamará \textless \verb|nombre-repositorio|\textgreater \verb|.pdf|. 
+	
+        \begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/ghshell8-6}
+		\caption{Indice del PDF generado}
+		\label{fig:ghshell8-6}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-7}
+		\caption{Introducción del PDF generado}
+		\label{fig:ghshell8-7}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-8}
+		\caption{Resultado del clonado del repositorio}
+		\label{fig:ghshell8-8}
+		\end{center}
+		\end{figure}
+		
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/ghshell8-9}
+		\caption{Resultado de la ejecución del script en el repositorio}
+		\label{fig:ghshell8-9}
+		\end{center}
+		\end{figure}   
+	
+	
+	
+\newpage
 	
 	%-------------------	 
-	\item Seleccionar assignments. Comando 'assignments'.
+	\item \underline{Seleccionar assignments}. Comando \verb|assignments|.
 	
 		\begin{verbatim}
 			ghshell > assignments string | /regexp/ [clone|book|script <file>]
@@ -460,9 +567,10 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 		
 		
-		En el caso de que además se pase alguno de los parámetros: 'clone', 'script \textless file\textgreater' o 'book'; se clonará, se ejecutará un script o se creará un libro respectivamente en los repositorios que coincidan con el string o la expresión regular. 
-\bigskip		
-		Además, en el caso del comando 'clone', se creará una carpeta con el nombre de la asignación que contendrá todas las asignaciones clonadas.
+		En el caso de que además se pase alguno de los parámetros: \verb|clone|, \verb|script <file>| o \verb|book|; se clonará, se ejecutará un script o se creará un libro respectivamente en los repositorios que coincidan con el string o la expresión regular. 
+\bigskip
+
+Además, en el caso del comando \verb|clone|, se creará una carpeta con el nombre de la asignación que contendrá todas las asignaciones clonadas.
 	
 		\begin{figure}[H]
 		\begin{center}
@@ -490,23 +598,26 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		
 		\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.7\textwidth]{images/assignments1-4}
+		\includegraphics[width=0.8\textwidth]{images/assignments1-4}
 		\caption{Directorios y ficheros generados}
 		\label{fig:assignment1-4}
 		\end{center}
 		\end{figure}		
 	
 \end{itemize}
+\newpage
 
 \subsection{Contexto de repositorio}
 \label{subsec:b.2.3}
 
-	Los comandos 'pwd' y 'exit' tienen el mismo comportamiento que en el contexto principal. 
-	El comando 'back' tienen el mismo comportamiento que en el contexto de organizaciones.
+	Los comandos \verb|pwd| y \verb|exit| tienen el mismo comportamiento que en el contexto principal. 
+\bigskip
+	
+	El comando \verb|back| tienen el mismo comportamiento que en el contexto de organizaciones.
 	
 \begin{itemize}
 
-	\item Mostrar la ayuda. Comando 'help'.
+	\item \underline{Mostrar la ayuda}. Comando \verb|help|.
 		
 		\begin{verbatim}
 			ghshell > help
@@ -523,13 +634,13 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 
 	%-------------------	
-	\item Clonar repositorios. Comando 'clone'.
+	\item \underline{Clonar repositorios}. Comando \verb|clone|.
 	
 		\begin{verbatim}
 			ghshell > clone
 		\end{verbatim}
 		
-		Tiene el mismo funcionamiento que en el resto de contextos. Se ejecuta sin argumentos y clona el repositorio donde nos encontremos.
+		En este contexto, se ejecuta sin argumentos y clona el repositorio donde nos encontremos.
 		
 		\begin{figure}[H]
 		\begin{center}
@@ -538,15 +649,17 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\label{fig:clone1-4}
 		\end{center}
 		\end{figure}
-		
+
+\newpage
+	
 	%-------------------		
-	\item Ejecutar un script determinado. Comando 'script'
+	\item \underline{Ejecutar un script determinado}. Comando \verb|script|.
 	
 		\begin{verbatim}
 			ghshell > script <file>
 		\end{verbatim}
 		
-		Tiene el mismo funcionamiento que en el contexto de organizaciones. Se ejecuta sin argumentos y ejecuta el script indicado sobre el repositorio donde nos encontremos.
+		En este contexto, se ejecuta sin argumentos y ejecuta el script indicado sobre el repositorio donde nos encontremos.
 		
 		\begin{figure}[H]
 		\begin{center}
@@ -557,13 +670,13 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 		
 	%-------------------
-	\item Exportar resultados. Comando 'book'.
+	\item \underline{Exportar resultados}. Comando \verb|book|.
 	
 		\begin{verbatim}
 			ghshell > book
 		\end{verbatim}
 		
-		Tiene el mismo funcionamiento que en el contexto de organizaciones. Se ejecuta sin argumentos y crea un Gitbook con los resultados de todos los scripts ejecutados sobre el repositorio donde nos encontremos.
+		En este contexto, se ejecuta sin argumentos y crea un Gitbook con los resultados de todos los scripts ejecutados sobre el repositorio donde nos encontremos.
 		
 		\begin{figure}[H]
 		\begin{center}
@@ -574,7 +687,7 @@ Para ejecutar el programa, basta con ejecutar el siguiente comando en la consola
 		\end{figure}
 	
 	%-------------------	
-	\item Obtener el propietario del repositorio. Comando 'owner'.
+	\item \underline{Obtener el propietario del repositorio}. Comando \verb|owner|.
 	
 		\begin{verbatim}
 			ghshell > owner
