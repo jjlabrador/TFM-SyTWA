@@ -16,20 +16,15 @@ La automatización de las tareas de clonado y ejecución de pruebas facilitaría
 Por otra parte, esta herramienta sienta las bases a posibles desarrollos futuros, ampliando las funcionalidades de la misma. Se ha desarrollado pensando en su posible escalabilidad y ya que cuenta con toda la estructura base creada (autentificación de usuarios, clonado, ejecución y reporte de resultados), se pueden añadir funcionalidades sin demasiado esfuerzo.
 \newpage
 
-Para concluir, podemos afirmar que los objetivos marcados al comienzo de este Trabajo de Fin de Máster han sido cumplidos y las principales líneas de desarrollo a continuar podrían ser las enumeradas a
-continuación:  
+Para concluir, podemos afirmar que los objetivos marcados al comienzo de este Trabajo de Fin de Máster han sido cumplidos y las principales líneas de desarrollo a continuar podrían ser las enumeradas a continuación:  
 
 \begin{itemize}
-	\item Dotar de más funcionalidad de GitHub a la herramienta:
-	\begin{itemize}
-		\item Subir cambios a los repositorios (git push).
-		\item Crear issues.
-		\item Gestionar Pull Requests.
-		\item Buscar repositorios.
-		\item Gestión de permisos de usuarios a repositorios y organizaciones.
-		\item Gestionar Classrooms.
-	\end{itemize}
-	\item Enriquecer el formato de la documentación generada.
-	\item Realizar despliegues locales de aplicaciones web (como procesos hijos de la herramienta).
+	\item Generar scripts en \verb|Bash| para evaluar aplicaciones (instalación de dependencias, comprobación de calidad de código y ejecución de tests) en varios lenguajes: \verb|Node.js|, \verb|C++|, \verb|Ruby|, \verb|Python|, etc.
+	\bigskip
+	
+	Esta colección de scripts podrían formar parte de la distribución o bien ser distribuidos separadamente como aplicaciones que facilitan el uso de \verb|ghshell|.
+	
+	\item Dar soporte a la ejecución de scripts escritos en otros lenguajes: Ruby, Python...
+	\item Generar {\it issues} en cada repositorio con los resultados de los scripts que se ejecuten.
+	\item Crear {\it ramas} en cada repositorio con los resultados de los scripts.
 \end{itemize}
-
