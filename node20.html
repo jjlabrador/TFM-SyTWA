@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Recopilar la información obtenida de la automatización de tareas</TITLE>
+<META NAME="description" CONTENT="Recopilar la información obtenida de la automatización de tareas">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html494"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html488"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html484"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html490"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html492"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html495"
+  HREF="node21.html">Funcionalidades extra</A>
+<B> Subir:</B> <A NAME="tex2html489"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<B> Anterior:</B> <A NAME="tex2html485"
+  HREF="node19.html">Automatizar la ejecución de</A>
+ &nbsp; <B>  <A NAME="tex2html491"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html493"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00615000000000000000"></A>
+<A NAME="subsec:3.1.4"></A>
+<BR>
+Recopilar la información obtenida de la automatización de tareas
+</H2><B></B>
+<P>
+<B><B><B><B>Una vez ejecutados los scripts necesarios para evaluar un determinado repositorio, es posible generar un <B>GitBook</B> con el resultado de la ejecución de los mismos. Este libro se genera en formato PDF y en HTML.
+</B></B></B></B>
+<P><P>
+<BR>
+<B></B>
+<P>
+<B><B><B><B>En función del contexto dónde nos encontremos dentro de la herramienta, podremos:
+    </B></B></B></B>
+<UL>
+<LI>Crear un GitBook en el repositorio en el que nos encontremos.
+</LI>
+<LI>Crear un GitBook en un determinado repositorio.
+</LI>
+<LI>Crear un GitBook en todos los repositorios que coincidan con una determinada expresión regular.
+</LI>
+<LI>Crear un GitBook en todos los repositorios de una asignación coincidan con una determinada expresión regular.
+    
+</LI>
+</UL><B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-3"></A><A NAME="904"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Creación del Gitbook en el repositorio actual</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1048" HEIGHT="126" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-3.png"
+ ALT="Image ghshell8-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-1"></A><A NAME="911"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Creación del Gitbook en asignaciones que coinciden con una expresión regular</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="984" HEIGHT="192" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-1.png"
+ ALT="Image ghshell8-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B><B><B><B>Se puede observar el progreso de la creación del libro revisando los ficheros de logs que se generan: &lt;<code>nombre-repositorio</code>&gt;<code>-gitbook_build.out</code> y &lt;<code>nombre-repositorio</code>&gt;<code>-gitbook_pdf.out</code>.
+</B></B></B></B>
+<P>
+<B></B>
+<P><P>
+<BR>
+<B><B><B><B>		Tanto el PDF como el HTML, contarán con las siguientes páginas:
+</B></B></B></B>
+<P>
+<B></B>
+<UL>
+<LI>Índice (Tabla de contenidos).
+</LI>
+<LI>Introducción: en esta página se copiará el fichero <I>README.md</I> del repositorio. En caso de que no tuviera ese fichero, se imprimirá un mensaje que indica que el repositorio no tiene fichero README.md.
+</LI>
+<LI>Páginas correspondientes a la ejecución de cada script.
+		
+</LI>
+</UL><B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-2"></A><A NAME="921"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Resultado de la creación del Gitbook</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="735" HEIGHT="551" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-2.png"
+ ALT="Image ghshell8-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B><B><B><B>La carpeta que contiene el libro en HTML se llamará: <BR>
+		&lt;<code>nombre-repositorio</code>&gt;<code>_gitbook/</code><code>_book</code>. 
+</B></B></B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-4"></A><A NAME="928"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Localización del HTML del Gitbook</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="772" HEIGHT="681" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-4.png"
+ ALT="Image ghshell8-4">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B><B><B><B>El fichero PDF que se genera se llamará &lt;<code>nombre-repositorio</code>&gt;<code>.pdf</code>. 
+</B></B></B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-6"></A><A NAME="935"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3.21:</STRONG>
+Indice del PDF generado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="885" HEIGHT="188" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-6.png"
+ ALT="Image ghshell8-6">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-7"></A><A NAME="942"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Introducción del PDF generado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="586" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-7.png"
+ ALT="Image ghshell8-7">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-8"></A><A NAME="949"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3.23:</STRONG>
+Resultado del clonado del repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="527" HEIGHT="342" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-8.png"
+ ALT="Image ghshell8-8">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-9"></A><A NAME="956"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Resultado de la ejecución del script en el repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="481" HEIGHT="445" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-9.png"
+ ALT="Image ghshell8-9">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html494"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html488"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html484"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html490"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html492"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html495"
+  HREF="node21.html">Funcionalidades extra</A>
+<B> Subir:</B> <A NAME="tex2html489"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<B> Anterior:</B> <A NAME="tex2html485"
+  HREF="node19.html">Automatizar la ejecución de</A>
+ &nbsp; <B>  <A NAME="tex2html491"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html493"
+  HREF="node45.html">&#205;ndice de Materias</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,465 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Contexto principal</TITLE>
+<META NAME="description" CONTENT="Contexto principal">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="next" HREF="node43.html">
+<LINK REL="previous" HREF="node41.html">
+<LINK REL="up" HREF="node39.html">
+<LINK REL="next" HREF="node43.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html816"
+  HREF="node43.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html810"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html804"
+  HREF="node41.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html812"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html814"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html817"
+  HREF="node43.html">Contexto de organización</A>
+<B> Subir:</B> <A NAME="tex2html811"
+  HREF="node39.html">Ejecución</A>
+<B> Anterior:</B> <A NAME="tex2html805"
+  HREF="node41.html">Iniciar/Cerrar sesión</A>
+ &nbsp; <B>  <A NAME="tex2html813"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html815"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001123000000000000000"></A>
+<A NAME="subsec:b.2.2"></A>
+<BR>
+Contexto principal
+</H2><B><B>
+<P>
+<B><B><B><B><B>Una vez autentificados, en el menú principal podremos hacer las siguientes acciones:
+</B></B></B></B></B>
+<P>
+<B><B>
+<UL>
+<LI><SPAN ID="txt2190">Mostrar la ayuda</SPAN>. Comando <code>help</code>.
+
+<P>
+<PRE>
+			ghshell &gt; help
+</PRE>
+
+<P>
+En función del contexto donde nos encontremos, se mostrarán diferentes opciones en la ayuda.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:help1-1"></A><A NAME="2196"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.6:</STRONG>
+Ayuda global</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1308" HEIGHT="432" ALIGN="BOTTOM" BORDER="0"
+ SRC="./help1-1.png"
+ ALT="Image help1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2200">Mostrar el directorio de trabajo actual</SPAN>. Comando <code>pwd</code>.
+
+<P>
+<PRE>
+			ghshell &gt; pwd
+</PRE>
+
+<P>
+Visualiza el directorio de trabajo donde se ha ejecutado el programa:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:pwd"></A><A NAME="2206"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.7:</STRONG>
+Directorio actual de trabajo</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="676" HEIGHT="106" ALIGN="BOTTOM" BORDER="0"
+ SRC="./pwd.png"
+ ALT="Image pwd">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<B>NOTA</B>: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización o dentro de un repositorio de una organización.
+
+<P>
+</LI>
+<LI><SPAN ID="txt2211">Listar y acceder a organizaciones</SPAN>. Comando <code>orgs</code>.
+
+<P>
+<PRE>
+			ghshell &gt; orgs [-l]
+</PRE>
+
+<P>
+Si se ejecuta el comando sin argumentos, pregunta al usuario a qué organización quiere acceder. Se puede usar la tecla tabulador para ver las organizaciones disponibles.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:orgs1-1"></A><A NAME="2217"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Acceso a una organización</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="952" HEIGHT="259" ALIGN="BOTTOM" BORDER="0"
+ SRC="./orgs1-1.png"
+ ALT="Image orgs1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+El <I>prompt</I> de la consola cambiará para indicarnos que nos encontramos dentro de la organización.
+		
+<P><P>
+<BR>
+
+<P>
+Si se ejecuta el comando con la opción <code>-l</code>, simplemente lista las organizaciones a las que pertenece el usuario.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell3"></A><A NAME="2225"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.9:</STRONG>
+Lista de organizaciones del usuario</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="960" HEIGHT="137" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell3.png"
+ ALT="Image ghshell3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+		
+</LI>
+<LI><SPAN ID="txt2229">Listar y acceder a repositorios</SPAN>. Comando <code>repos</code>.
+
+<P>
+<PRE>
+			ghshell &gt; repos [-l] [string | /regexp/]
+</PRE>
+
+<P>
+Si se ejecuta el comando sin argumentos, pregunta al usuario a qué repositorio quiere acceder. Se puede usar la tecla tabulador para ver los repositorios disponibles.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:repos1-1"></A><A NAME="2235"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.10:</STRONG>
+Acceso a un repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="877" HEIGHT="196" ALIGN="BOTTOM" BORDER="0"
+ SRC="./repos1-1.png"
+ ALT="Image repos1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+El <I>prompt</I> de la consola cambiará para indicarnos que nos encontramos dentro de un repositorio.		
+		
+<P><P>
+<BR>
+
+<P>
+Si se ejecuta el comando con la opción <code>-l</code>, simplemente se listan los repositorios que pertenecen al usuario.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:repos1-2"></A><A NAME="2243"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.11:</STRONG>
+Listado de repositorios del usuario</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1359" HEIGHT="307" ALIGN="BOTTOM" BORDER="0"
+ SRC="./repos1-2.png"
+ ALT="Image repos1-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<P>
+Si se especifica como argumento un string o expresión regular, se mostrarán los repositorios que coincidan con ese argumento:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:repos1-3"></A><A NAME="2250"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.12:</STRONG>
+Listado de repositorios del usuario que coinciden con el argumento pasado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="291" HEIGHT="136" ALIGN="BOTTOM" BORDER="0"
+ SRC="./repos1-3.png"
+ ALT="Image repos1-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<B>NOTA</B>: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:repos1-4"></A><A NAME="2258"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Acceso a un repositorio dentro de una organización</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="874" HEIGHT="205" ALIGN="BOTTOM" BORDER="0"
+ SRC="./repos1-4.png"
+ ALT="Image repos1-4">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:repos1-5"></A><A NAME="2265"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Listado de repositorios de una organización</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1359" HEIGHT="143" ALIGN="BOTTOM" BORDER="0"
+ SRC="./repos1-5.png"
+ ALT="Image repos1-5">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:repos1-6"></A><A NAME="2272"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Listado de repositorios de una organización que coinciden con el argumento pasado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="591" HEIGHT="123" ALIGN="BOTTOM" BORDER="0"
+ SRC="./repos1-6.png"
+ ALT="Image repos1-6">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2276">Clonar repositorios</SPAN>. Comando <code>clone</code>.
+
+<P>
+<PRE>
+			ghshell &gt; clone string | /regexp/
+</PRE>	
+
+<P>
+Al especificar el argumento como un string o expresión regular, se clonarán todos los repositorios que coincidan con ese argumento. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:clone1-1"></A><A NAME="2282"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.16:</STRONG>
+Clonado de repositorios que coinciden con el string pasado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="908" HEIGHT="116" ALIGN="BOTTOM" BORDER="0"
+ SRC="./clone1-1.png"
+ ALT="Image clone1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:clone1-2"></A><A NAME="2289"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.17:</STRONG>
+Clonado de repositorios que coinciden con la regexp pasada</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="881" HEIGHT="148" ALIGN="BOTTOM" BORDER="0"
+ SRC="./clone1-2.png"
+ ALT="Image clone1-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+El clonado se realiza de manera <B>asíncrona</B>, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). 
+
+<P><P>
+<BR>
+
+<P>
+Se puede observar el estado de la clonación revisando el fichero de log que se genera: &lt;<code>nombre-repositorio</code>&gt;<code>-clone.log</code>.:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:clone1-3"></A><A NAME="2297"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.18:</STRONG>
+Resultado del clonado de repositorios</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="513" HEIGHT="233" ALIGN="BOTTOM" BORDER="0"
+ SRC="./clone1-3.png"
+ ALT="Image clone1-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Los fichero de log muestran la información del clonado. Se ha añadido una huella de tiempo para tener un control más exacto sobre cuándo ocurre cada evento:
+
+<P>
+<PRE>[2017/07/02-01:20:47] Clonar en «TFM-SyTWA»...
+
+[2017/07/02-01:20:48] remote: Counting objects: 92, done.        
+
+[2017/07/02-01:20:48] remote: Compressing objects:   1% (1/65)           remote: Compressing objects:   3% (2/65)           remote: Compressing objects:   4% (3/65)           remote: Compressing objects:   6% (4/65)           remote: Compressing objects:   7% (5/65)           remote: Compressing objects:   9% (6/65)           remote: Compressing objects:  10% (7/65)           remote: Compressing objects:  12% (8/65)           remote: Compressing objects:  13% (9/65)           remote: Compressing objects:  15% (10/65)           remote: Compressing objects:  16% (11/65)           remote: Compressing objects:  18% (12/65)           
+[2017/07/02-01:20:48] remote: Compressing objects:  20% (13/65)           remote: Compressing objects:  21% (14/65)           remote: Compressing objects:  23% (15/65)           remote: Compressing objects:  24% (16/65)           remote: Compressing objects:  26% (17/65)           remote: Compressing objects:  27% (18/65)           remote: Compressing objects:  29% (19/65)           remote: Compressing objects:  30% (20/65)           remote: Compressing objects:  32% (21/65)           remote: Compressing objects:  33% (22/65)           remote: Compressing objects:  35% (23/65)           remote: Compressing objects:  36% (24/65)           remote: Compressing objects:  38% (25/65)           remote: Compressing objects:  40% (26/65)           remote: Compressing objects:  41% (27/65)           remote: Compressing objects:  43% (28/65)           remote: Compressing objects:  44% (29/65)           remote: Compressing objects:  46% (30/65)           remote: Compressing objects:  47% (31/65)           remote: Compressing objects:  49% (32/65)           remote: Compressing objects:  50% (33/65)           remote: Compressing objects:  52% (34/65)           remote: Compressing objects:  53% (35/65)           remote: Compressing objects:  55% (36/65)           remote: Compressing objects:  56% (37/65)           remote: Compressing objects:  58% (38/65)           remote: Compressing objects:  60% (39/65)           remote: Compressing objects:  61% (40/65)           remote: Compressing objects:  63% (41/65)           remote: Compressing objects:  64% (42/65)           remote: Compressing objects:  66% (43/65)           remote: Compressing objects:  67% (44/65)           remote: Compressing objects:  69% (45/65)           remote: Compressing objects:  70% (46/65)           remote: Compressing objects:  72% (47/65)           remote: Compressing objects:  73% (48/65)           remote: Compressing objects:  75% (49/65)           remote: Compressing objects:  76% (50/65)           remote: Compressing objects:  78% (51/65)           remote: Compressing objects:  80% (52/65)           remote: Compressing objects:  81% (53/65)           remote: Compressing objects:  83% (54/65)           remote: Compressing objects:  84% (55/65)           remote: Compressing objects:  86% (56/65)           remote: Compressing objects:  87% (57/65)           remote: Compressing objects:  89% (58/65)           remote: Compressing objects:  90% (59/65)           remote: Compressing objects:  92% (60/65)           remote: Compressing objects:  93% (61/65)           remote: Compressing objects:  95% (62/65)           remote: Compressing objects:  96% (63/65)           remote: Compressing objects:  98% (64/65)           remote: Compressing objects: 100% (65/65)           remote: Compressing objects: 100% (65/65), done.        
+
+[2017/07/02-01:20:49] remote: Total 92 (delta 25), reused 92 (delta 25), pack-reused 0        
+
+[2017/07/02-01:20:49] Comprobando la conectividad… 
+[2017/07/02-01:20:49] hecho.
+</PRE>
+
+<P>
+
+		
+</LI>
+<LI><SPAN ID="txt2517">Salir del programa</SPAN>. Comando <code>exit</code>.
+
+<P>
+
+<P><P>
+<BR>
+Causa el cierre ordenado del programa.
+		
+<P><P>
+<BR>
+
+<P>
+<B>NOTA</B>: este comando tiene el mismo comportamiento si nos encontramos dentro de una organización o dentro de un repositorio de una organización. 
+
+<P>
+</LI>
+</UL><B><B>
+<P>
+<B><B>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html816"
+  HREF="node43.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html810"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html804"
+  HREF="node41.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html812"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html814"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html817"
+  HREF="node43.html">Contexto de organización</A>
+<B> Subir:</B> <A NAME="tex2html811"
+  HREF="node39.html">Ejecución</A>
+<B> Anterior:</B> <A NAME="tex2html805"
+  HREF="node41.html">Iniciar/Cerrar sesión</A>
+ &nbsp; <B>  <A NAME="tex2html813"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html815"
+  HREF="node45.html">&#205;ndice de Materias</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>

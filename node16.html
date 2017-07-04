@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Autenticación con GitHub</TITLE>
+<META NAME="description" CONTENT="Autenticación con GitHub">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html440"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html434"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html428"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html436"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html438"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html441"
+  HREF="node17.html">Listar organizaciones, asignaciones y</A>
+<B> Subir:</B> <A NAME="tex2html435"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<B> Anterior:</B> <A NAME="tex2html429"
+  HREF="node15.html">Funcionalidades requeridas</A>
+ &nbsp; <B>  <A NAME="tex2html437"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html439"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00611000000000000000"></A>
+<A NAME="subsec:3.1.1"></A>
+<BR>
+Autenticación con GitHub
+</H2><B></B>
+<P>
+<B><B><B><B>Una vez que el usuario se autentifica con GitHub, se genera un <A NAME="1067"></A><A HREF="node33.html#apend1:token">$Token$</A> personal, que se usa posteriormente para acceder a la <A NAME="1074"></A><A HREF="node33.html#apend1:api">$API$</A> de Github. 
+</B></B></B></B>
+<P><P>
+<BR>
+<B></B>
+<P>
+<B><B><B><B>Este token se almacena cifrado en el equipo del usuario, por lo que las siguientes ocasiones que utilice la herramienta no hará falta que vuelva a iniciar sesión:
+</B></B></B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell1"></A><A NAME="782"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3.2:</STRONG>
+Login de usuario</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="513" HEIGHT="328" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell1.png"
+ ALT="Image ghshell1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell2-1"></A><A NAME="789"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3.3:</STRONG>
+Usuario autenticado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="489" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell2-1.png"
+ ALT="Image ghshell2-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell2-3"></A><A NAME="796"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3.4:</STRONG>
+Token personal en GitHub</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="759" HEIGHT="190" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell2-3.png"
+ ALT="Image ghshell2-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell2-4"></A><A NAME="803"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Login automático una vez generado el token</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="468" HEIGHT="378" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell2-4.png"
+ ALT="Image ghshell2-4">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B><B><B><B>Si el usuario cierra sesión en la herramienta, se eliminará el token en GitHub y en el equipo:
+</B></B></B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell2-2"></A><A NAME="810"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3.6:</STRONG>
+Logout de usuario</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="417" HEIGHT="187" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell2-2.png"
+ ALT="Image ghshell2-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html440"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html434"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html428"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html436"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html438"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html441"
+  HREF="node17.html">Listar organizaciones, asignaciones y</A>
+<B> Subir:</B> <A NAME="tex2html435"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<B> Anterior:</B> <A NAME="tex2html429"
+  HREF="node15.html">Funcionalidades requeridas</A>
+ &nbsp; <B>  <A NAME="tex2html437"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html439"
+  HREF="node45.html">&#205;ndice de Materias</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>

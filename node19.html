@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Automatizar la ejecución de scripts en los repositorios</TITLE>
+<META NAME="description" CONTENT="Automatizar la ejecución de scripts en los repositorios">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html482"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html476"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html470"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html478"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html480"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html483"
+  HREF="node20.html">Recopilar la información obtenida</A>
+<B> Subir:</B> <A NAME="tex2html477"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<B> Anterior:</B> <A NAME="tex2html471"
+  HREF="node18.html">Automatizar la descarga de</A>
+ &nbsp; <B>  <A NAME="tex2html479"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html481"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00614000000000000000"></A>
+<A NAME="subsec:3.1.3"></A>
+<BR>
+Automatizar la ejecución de scripts en los repositorios
+</H2><B></B>
+<P>
+<B><B><B><B>En función del contexto donde nos encontremos dentro de la herramienta, podremos:
+    </B></B></B></B>
+<UL>
+<LI>Ejecutar un script en el repositorio en el que nos encontremos.
+</LI>
+<LI>Ejecutar un script en un determinado repositorio.
+</LI>
+<LI>Ejecutar un script en todos los repositorios que coincidan con una determinada expresión regular.
+</LI>
+<LI>Ejecutar un script en todos los repositorios de una asignación que coincidan con una determinada expresión regular.
+    
+</LI>
+</UL><B></B>
+<P>
+<B><B><B><B>La ruta del fichero del script puede ser absoluta o relativa. 
+</B></B></B></B>
+<P><P>
+<BR>
+<B></B>
+<P>
+<B><B><B><B>Estos scripts deben estar escritos en <code>Bash</code>.
+</B></B></B></B>
+<P><P>
+<BR>
+<B></B>
+<P>
+<B><B><B><B>La ejecución de cada script se ejecuta en un proceso hijo independiente pero, a diferencia del clonado, el script se ejecuta línea a línea de manera <A NAME="1088"></A><A HREF="node33.html#apend1:sincrona">$sincrona$</A>. 
+</B></B></B></B>
+<P><P>
+<BR>
+<B></B>
+<P>
+<B><B><B><B>Se puede observar el estado de la ejecución del script y los resultados revisando el fichero de log que se genera: &lt;<code>nombre-repositorio</code>&gt;<code>-</code>&lt;<code>nombre-script</code>&gt;<code>.log</code>
+</B></B></B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell7-3"></A><A NAME="878"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Ejecución del script 'install.sh' en el repositorio actual</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1210" HEIGHT="109" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell7-3.png"
+ ALT="Image ghshell7-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell7-1"></A><A NAME="885"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Ejecución del script 'install.sh' en asignaciones que coinciden con una expresión regular</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1159" HEIGHT="153" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell7-1.png"
+ ALT="Image ghshell7-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell7-2"></A><A NAME="892"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Resultado de la ejecución del script 'install.sh'</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="695" HEIGHT="354" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell7-2.png"
+ ALT="Image ghshell7-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html482"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html476"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html470"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html478"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html480"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html483"
+  HREF="node20.html">Recopilar la información obtenida</A>
+<B> Subir:</B> <A NAME="tex2html477"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<B> Anterior:</B> <A NAME="tex2html471"
+  HREF="node18.html">Automatizar la descarga de</A>
+ &nbsp; <B>  <A NAME="tex2html479"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html481"
+  HREF="node45.html">&#205;ndice de Materias</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>

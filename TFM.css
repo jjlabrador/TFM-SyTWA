@@ -1,0 +1,116 @@
+/* Century Schoolbook font is very similar to Computer Modern Math: cmmi */
+.MATH    { font-family: "Century Schoolbook", serif; }
+.MATH I  { font-family: "Century Schoolbook", serif; font-style: italic }
+.BOLDMATH { font-family: "Century Schoolbook", serif; font-weight: bold }
+
+/* implement both fixed-size and relative sizes */
+SMALL.XTINY		{ font-size : xx-small }
+SMALL.TINY		{ font-size : x-small  }
+SMALL.SCRIPTSIZE	{ font-size : smaller  }
+SMALL.FOOTNOTESIZE	{ font-size : small    }
+SMALL.SMALL		{  }
+BIG.LARGE		{  }
+BIG.XLARGE		{ font-size : large    }
+BIG.XXLARGE		{ font-size : x-large  }
+BIG.HUGE		{ font-size : larger   }
+BIG.XHUGE		{ font-size : xx-large }
+
+/* heading styles */
+H1		{  }
+H2		{  }
+H3		{  }
+H4		{  }
+H5		{  }
+
+/* mathematics styles */
+DIV.displaymath		{ }	/* math displays */
+TD.eqno			{ }	/* equation-number cells */
+
+
+/* document-specific styles come next */
+SPAN.itshape		{   }
+PRE.preform		{   }
+DIV.huge		{   }
+DIV.LARGE		{   }
+DIV.large		{   }
+DIV.center		{   }
+DIV.flushright		{   }
+DIV.navigation		{   }
+SPAN.bfseries		{   }
+SPAN.textbf		{ font-weight: bold  }
+SPAN.arabic		{   }
+SPAN.textit		{ font-style: italic  }
+#txt1007		{ text-decoration: underline;  }
+#txt1015		{ text-decoration: underline;  }
+#txt1038		{ text-decoration: underline;  }
+#txt1041		{ text-decoration: underline;  }
+#txt1671		{ text-decoration: underline;  }
+#txt1677		{ text-decoration: underline;  }
+#txt1682		{ text-decoration: underline;  }
+#txt1686		{ text-decoration: underline;  }
+#txt1690		{ text-decoration: underline;  }
+#txt1696		{ text-decoration: underline;  }
+#txt1700		{ text-decoration: underline;  }
+#txt1707		{ text-decoration: underline;  }
+#txt1712		{ text-decoration: underline;  }
+#txt1718		{ text-decoration: underline;  }
+#txt1725		{ text-decoration: underline;  }
+#txt1732		{ text-decoration: underline;  }
+#txt1739		{ text-decoration: underline;  }
+#txt1745		{ text-decoration: underline;  }
+#txt1750		{ text-decoration: underline;  }
+#txt1757		{ text-decoration: underline;  }
+#txt1763		{ text-decoration: underline;  }
+#txt1769		{ text-decoration: underline;  }
+#txt1775		{ text-decoration: underline;  }
+#txt1780		{ text-decoration: underline;  }
+#txt1786		{ text-decoration: underline;  }
+#txt1791		{ text-decoration: underline;  }
+#txt1798		{ text-decoration: underline;  }
+#txt1804		{ text-decoration: underline;  }
+#txt1809		{ text-decoration: underline;  }
+#txt2126		{ text-decoration: underline;  }
+#txt2130		{ text-decoration: underline;  }
+#txt2190		{ text-decoration: underline;  }
+#txt2200		{ text-decoration: underline;  }
+#txt2211		{ text-decoration: underline;  }
+#txt2229		{ text-decoration: underline;  }
+#txt2276		{ text-decoration: underline;  }
+#txt2517		{ text-decoration: underline;  }
+#txt2523		{ text-decoration: underline;  }
+#txt2533		{ text-decoration: underline;  }
+#txt2550		{ text-decoration: underline;  }
+#txt2568		{ text-decoration: underline;  }
+#txt2634		{ text-decoration: underline;  }
+#txt2676		{ text-decoration: underline;  }
+#txt2686		{ text-decoration: underline;  }
+#txt2696		{ text-decoration: underline;  }
+#txt2706		{ text-decoration: underline;  }
+#txt2716		{ text-decoration: underline;  }
+#txt3918		{ text-decoration: underline;  }
+#txt3924		{ text-decoration: underline;  }
+#txt3930		{ text-decoration: underline;  }
+#txt3936		{ text-decoration: underline;  }
+#txt3942		{ text-decoration: underline;  }
+#txt3954		{ text-decoration: underline;  }
+#txt3960		{ text-decoration: underline;  }
+#txt3972		{ text-decoration: underline;  }
+#txt3978		{ text-decoration: underline;  }
+#txt3984		{ text-decoration: underline;  }
+#txt3996		{ text-decoration: underline;  }
+#txt4008		{ text-decoration: underline;  }
+#txt4020		{ text-decoration: underline;  }
+#txt4032		{ text-decoration: underline;  }
+#txt4038		{ text-decoration: underline;  }
+#txt4050		{ text-decoration: underline;  }
+#txt4062		{ text-decoration: underline;  }
+#txt4074		{ text-decoration: underline;  }
+#txt4086		{ text-decoration: underline;  }
+#txt4092		{ text-decoration: underline;  }
+#txt4104		{ text-decoration: underline;  }
+#txt4110		{ text-decoration: underline;  }
+#txt4116		{ text-decoration: underline;  }
+#txt4128		{ text-decoration: underline;  }
+#txt4134		{ text-decoration: underline;  }
+#txt963		{ text-decoration: underline;  }
+#txt985		{ text-decoration: underline;  }

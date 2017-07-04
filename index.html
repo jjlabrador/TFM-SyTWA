@@ -1,0 +1,457 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>TFM</TITLE>
+<META NAME="description" CONTENT="TFM">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html105"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.png"> 
+<A NAME="tex2html101"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html103"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html106"
+  HREF="node1.html">&#205;ndice General</A>
+ &nbsp; <B>  <A NAME="tex2html102"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html104"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<P>
+&#205;ndice de TablasÍndice de Tablas      
+&#205;ndice de FigurasÍndice de Figuras    
+
+<P>
+
+<P>
+
+<P>
+<BR>
+
+<P>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="220" HEIGHT="206" ALIGN="BOTTOM" BORDER="0"
+ SRC="./logo_vertical.jpg"
+ ALT="Image logo_vertical">
+
+</DIV>
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+<BIG CLASS="XHUGE">Trabajo de Fin de Máster</BIG>
+<BIG CLASS="XHUGE">Sistemas y Tecnologías Web Aplicadas (SyTWA)</BIG>
+
+</DIV>
+
+<P>
+
+<DIV ALIGN="RIGHT">
+<BIG CLASS="XHUGE">Shell para corrección automática de repositorios de GitHub</BIG> <BR>
+<BR>        <BIG CLASS="XLARGE"><SPAN  CLASS="textit">CLI tool for automatic correction of GitHub's repositories</SPAN> .</BIG> <BR>
+<BR>        <BIG CLASS="XLARGE">Juan José Labrador González</BIG> <BR>
+<BR></DIV>
+<P>
+<DIV ALIGN="RIGHT">
+</DIV>
+
+<BR>
+<DIV ALIGN="CENTER">
+<BIG CLASS="XLARGE">La Laguna, 4 de julio 2017
+
+</BIG></DIV>
+
+<P>
+
+<P>
+
+<P>
+D. <B>Casiano Rodríguez León</B>, con DNI número 42.020.072-S
+profesor
+Titular de Universidad
+adscrito al Departamento
+de Ingeniería Informática y de Sistemas
+de la Universidad de La Laguna, como tutor
+
+<P>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+<B>C E R T I F I C A </B>
+
+<P>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+Que la presente memoria titulada:
+
+<P>
+
+<P><P>
+<BR>
+``<I>Sistemas y Tecnologías Web Aplicadas. Shell para corrección automática de repositorios de GitHub.</I>''
+
+<P>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+
+<P>
+ha sido realizada bajo su dirección por D. <B>Juan José Labrador González</B>,
+con DNI número 78.729.778-L.
+
+<P>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+
+<P>
+Y para que así conste, en cumplimiento de la legislación vigente y a los efectos
+oportunos firman la presente en La Laguna a 4 de julio 2017
+
+<P>
+
+<P>
+<DIV ALIGN="RIGHT"204>
+</DIV>
+<P>
+<DIV ALIGN="RIGHT"></DIV>
+<DIV ALIGN="RIGHT"><BIG CLASS="XXLARGE">Agradecimientos
+</BIG>
+</DIV>
+<P>
+<DIV ALIGN="RIGHT"> 
+</DIV>
+<P>
+<DIV ALIGN="RIGHT"></DIV>
+<DIV ALIGN="RIGHT"></DIV>
+<P>
+<DIV ALIGN="RIGHT"><BIG CLASS="LARGE"> 
+La realización de esta asignatura de Trabajo de Fin de Máster no hubiera sido posible sin 
+la ayuda de la Sección de Ingeniería Informática de la Escuela Superior de Ingeniería 
+y Tecnología, que ha llevado a cabo todos los trámites necesarios.
+</BIG></DIV>
+<P><P>
+<BR>
+<DIV ALIGN="RIGHT"></DIV>
+<P>
+<DIV ALIGN="RIGHT"><BIG CLASS="LARGE"> 
+Mención especial para mi familia, pareja y amigos, quienes me han alentado para no rendirme y lograr mis objetivos pese a las dificultades y contratiempos encontrados durante la realización de este Trabajo de Fin de Máster.
+</BIG></DIV>
+<P><P>
+<BR>
+<DIV ALIGN="RIGHT"></DIV>
+<P>
+<DIV ALIGN="RIGHT"><BIG CLASS="LARGE"> 
+Y por último, especialmente agradecer a Casiano Rodríguez León su labor como tutor del 
+Trabajo de Fin de Máster. Además de aprender muchísimo junto a él, me ha aconsejado, animado y resuelto mis 
+dudas de manera incansable en la realización de este trabajo. Estoy seguro de que la experiencia y conocimientos adquiridos gracias a él, me ayudarán en mis próximos retos profesionales y personales.
+</BIG></DIV>
+<P>
+<DIV ALIGN="RIGHT">
+</DIV>
+<P>
+<DIV ALIGN="RIGHT">
+</DIV>
+
+<P>
+
+<P>
+<BIG CLASS="HUGE">Licencia
+</BIG>
+
+<P>
+
+<P><P>
+<BR>
+
+<P><P>
+<BR>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="88" HEIGHT="31" ALIGN="BOTTOM" BORDER="0"
+ SRC="./by-nc-sa_88x31.png"
+ ALT="Image by-nc-sa_88x31">
+
+</DIV>
+
+<P>
+<DIV ALIGN="CENTER">
+<BIG CLASS="XLARGE">&#169;&nbsp;Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional.
+</BIG>
+
+</DIV>
+
+<P>
+
+
+<H3>Resumen:</H3>
+<DIV CLASS="ABSTRACT">
+<P>
+<EM>El objetivo de este Trabajo de Fin de Máster ha sido integrar los conocimientos adquiridos durante los estudios del Máster y, en especial, del itinerario de Tecnologías de la Información, aproximando al alumno a la resolución de 
+problemas de aplicaciones Web y favoreciendo el desarrollo de destrezas propias de la Ingeniería Web: 
+se centra en el aprendizaje y puesta en práctica de metodologías, aproximaciones, técnicas y herramientas 
+para abordar la creciente complejidad de este tipo de aplicaciones en el marco de las metodologías ágiles. Cada vez ésta cobra más importancia, siendo constante el aumento del número de aplicaciones de escritorio, smartphones y tablets.
+</EM>
+<P><P>
+<BR>
+<P>
+<EM>En este Trabajo de Fin de Máster se propone el desarrollo de un paquete Node.js (NPM) que facilite la descarga y corrección de repositorios GitHub de alumnos.
+Existe un buen número de herramientas de Control de Versiones que permiten alojar proyectos software y agruparlos en organizaciones lógicas, pero carecen de mecanismos para automatizar funciones de uso cotidiano como la descarga de los mismos, la preparación del entorno de cada proyecto o la ejecución de pruebas.
+</EM>
+<P><P>
+<BR>
+<P>
+<EM>En nuestra propuesta, se ha realizado una primera aproximación a la automatización de descargas y correcciones de repositorios, recopilando todos los datos inherentes de estas acciones y generando los informes correspondientes en formato PDF y HTML. Todo ello mediante un sencillo uso y sentando las bases para proporcionar más funcionalidades a la herramienta en un futuro próximo.
+</EM>
+
+<P>
+
+<DL COMPACT>
+<DT><B>Palabras clave:</B>
+<DD>Consola, CLI, Shell, Terminal, Node.js, GitHub, Corrección, Automatización
+</DD>
+</DL>
+<P>
+</DIV>
+<P>
+<P>
+
+
+<P>
+<DIV ALIGN="CENTER">
+<SPAN  CLASS="textbf">Abstract</SPAN>
+</DIV>
+<P>
+<P>
+<I><EM>The aim of this Master's Degree Final Project has been to integrate all the knowledge gained during the Master studies, especially the knowledge from the Information Technologies speciality, bringing closer to the student the resolution of Web Application's problems and favouring the development of Web Engineering skills. These skills focus on the learning and use of methodologies, technologies and tools to deal with the growing complexity of Web Applications. Those skills are becoming more important, being constant the increase of desktop and mobile applications.
+</EM></I>
+<P><P>
+<BR>
+<P>
+<I><EM>This Master's Degree Final Project proposes the development of a Node.js package (NPM) that facilitates the download and correction of students' GitHub repositories.
+There are many Version Control tools that allow to host software projects and group them into logical organizations, but  they haven't automatic methods for downloading them, or setting up the environment for each project and executing tests on them.
+</EM></I>
+<P><P>
+<BR>
+<P>
+<I><EM>In our proposal, we had made a first approach to the automation of repositories' downloads and corrections, gathering all the inherent data of these actions and generating PDF and HTML reports with them. All that through a simple way and setting the bases to provide more functionalities to the tool in a near future.  
+</EM>
+</I>
+<P>
+<DL COMPACT>
+<DT><B>Keywords:</B>
+<DD>Console, CLI, Shell, Terminal, Node.js, GitHub, Correction, Automation
+</DD>
+</DL>
+<P>
+<P>
+
+
+<P>
+ 
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html107"
+  HREF="node1.html">&#205;ndice General</A>
+<LI><A NAME="tex2html108"
+  HREF="node2.html">&#205;ndice de Figuras</A>
+<LI><A NAME="tex2html109"
+  HREF="node3.html">&#205;ndice de Tablas</A>
+<LI><A NAME="tex2html110"
+  HREF="node4.html">Introducción</A>
+<UL>
+<LI><A NAME="tex2html111"
+  HREF="node5.html">Antecedentes</A>
+<LI><A NAME="tex2html112"
+  HREF="node6.html">Estado actual del arte</A>
+<LI><A NAME="tex2html113"
+  HREF="node7.html">Objetivos y actividades a realizar</A>
+<LI><A NAME="tex2html114"
+  HREF="node8.html">Tecnología usada</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html115"
+  HREF="node9.html">Desarrollo</A>
+<UL>
+<LI><A NAME="tex2html116"
+  HREF="node10.html">Metodología usada</A>
+<UL>
+<LI><A NAME="tex2html117"
+  HREF="node11.html">GitHub</A>
+<LI><A NAME="tex2html118"
+  HREF="node12.html">Travis-CI</A>
+<LI><A NAME="tex2html119"
+  HREF="node13.html">Experiencia de usuario</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html120"
+  HREF="node14.html">Resultados</A>
+<UL>
+<LI><A NAME="tex2html121"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<UL>
+<LI><A NAME="tex2html122"
+  HREF="node16.html">Autenticación con GitHub</A>
+<LI><A NAME="tex2html123"
+  HREF="node17.html">Listar organizaciones, asignaciones y repositorios de GitHub del usuario</A>
+<LI><A NAME="tex2html124"
+  HREF="node18.html">Automatizar la descarga de repositorios</A>
+<LI><A NAME="tex2html125"
+  HREF="node19.html">Automatizar la ejecución de scripts en los repositorios</A>
+<LI><A NAME="tex2html126"
+  HREF="node20.html">Recopilar la información obtenida de la automatización de tareas</A>
+</UL>
+<LI><A NAME="tex2html127"
+  HREF="node21.html">Funcionalidades extra</A>
+<LI><A NAME="tex2html128"
+  HREF="node22.html">Problemas encontrados y soluciones</A>
+<UL>
+<LI><A NAME="tex2html129"
+  HREF="node23.html">Asincronía</A>
+<LI><A NAME="tex2html130"
+  HREF="node24.html">Autocompletado de comandos</A>
+</UL>
+<LI><A NAME="tex2html131"
+  HREF="node25.html">Perfil del usuario de ghshell</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html132"
+  HREF="node26.html">Conclusiones y líneas futuras</A>
+<LI><A NAME="tex2html133"
+  HREF="node27.html">Summary and Conclusions </A>
+<LI><A NAME="tex2html134"
+  HREF="node28.html">Presupuesto</A>
+<UL>
+<LI><A NAME="tex2html135"
+  HREF="node29.html">Introducción y coste por hora</A>
+<LI><A NAME="tex2html136"
+  HREF="node30.html">Funcionalidades requeridas</A>
+<LI><A NAME="tex2html137"
+  HREF="node31.html">Funcionalidades extra</A>
+<LI><A NAME="tex2html138"
+  HREF="node32.html">Coste y duración total</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html139"
+  HREF="node33.html">Glosario de términos</A>
+<LI><A NAME="tex2html140"
+  HREF="node34.html">Guía de uso</A>
+<UL>
+<LI><A NAME="tex2html141"
+  HREF="node35.html">Instalación</A>
+<UL>
+<LI><A NAME="tex2html142"
+  HREF="node36.html">Requisitos</A>
+<LI><A NAME="tex2html143"
+  HREF="node37.html">Dependencias</A>
+<LI><A NAME="tex2html144"
+  HREF="node38.html">Instalación</A>
+</UL>
+<LI><A NAME="tex2html145"
+  HREF="node39.html">Ejecución</A>
+<UL>
+<LI><A NAME="tex2html146"
+  HREF="node40.html">Primeros pasos</A>
+<LI><A NAME="tex2html147"
+  HREF="node41.html">Iniciar/Cerrar sesión</A>
+<LI><A NAME="tex2html148"
+  HREF="node42.html">Contexto principal</A>
+<LI><A NAME="tex2html149"
+  HREF="node43.html">Contexto de organización</A>
+<LI><A NAME="tex2html150"
+  HREF="node44.html">Contexto de repositorio</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html151"
+  HREF="node45.html">&#205;ndice de Materias</A>
+<LI><A NAME="tex2html152"
+  HREF="node46.html">Bibliograf&#237;a</A>
+<LI><A NAME="tex2html153"
+  HREF="node47.html">Sobre este documento...</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html105"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.png"> 
+<A NAME="tex2html101"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html103"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html106"
+  HREF="node1.html">&#205;ndice General</A>
+ &nbsp; <B>  <A NAME="tex2html102"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html104"
+  HREF="node45.html">&#205;ndice de Materias</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>

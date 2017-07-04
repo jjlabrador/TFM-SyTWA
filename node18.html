@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Automatizar la descarga de repositorios</TITLE>
+<META NAME="description" CONTENT="Automatizar la descarga de repositorios">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node15.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html468"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html462"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html456"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html464"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html466"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html469"
+  HREF="node19.html">Automatizar la ejecución de</A>
+<B> Subir:</B> <A NAME="tex2html463"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<B> Anterior:</B> <A NAME="tex2html457"
+  HREF="node17.html">Listar organizaciones, asignaciones y</A>
+ &nbsp; <B>  <A NAME="tex2html465"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html467"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00613000000000000000"></A>
+<A NAME="subsec:3.1.3"></A>
+<BR>
+Automatizar la descarga de repositorios
+</H2><B></B>
+<P>
+<B><B><B><B>En función del contexto dónde nos encontremos dentro de la herramienta, podremos:
+    </B></B></B></B>
+<UL>
+<LI>Clonar el repositorio en el que nos encontremos.
+</LI>
+<LI>Clonar un repositorio determinado.
+</LI>
+<LI>Clonar todos los repositorios que coincidan con una determinada expresión regular.
+</LI>
+<LI>Clonar todos los repositorios de una asignación que coincidan con una determinada expresión.
+    
+</LI>
+</UL><B></B>
+<P>
+<B><B><B><B>El clonado se realiza de manera <A NAME="1081"></A><A HREF="node33.html#apend1:asincrona">$asincrona$</A>, por lo que podemos seguir trabajando mientras se clona(n) el/los repositorio(s). 
+</B></B></B></B>
+<P><P>
+<BR>
+<B></B>
+<P>
+<B><B><B><B>Se puede observar el estado de la clonación revisando el fichero de log que se genera cuyo nombre sigue el formato: &lt;<code>nombre-repositorio</code>&gt;<code>-clone.log</code>.
+</B></B></B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell6-3"></A><A NAME="852"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3.11:</STRONG>
+Clonado del repositorio donde nos encontramos</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1264" HEIGHT="120" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell6-3.png"
+ ALT="Image ghshell6-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<P>
+<B><B><B><B>Si clonamos repositorios que pertenecen a una organización, se creará una carpeta con el nombre de la organización y en su interior se guardarán los repositorios clonados.
+</B></B></B></B>
+<P>
+<B><B><B><B>Además, si clonamos repositorios que pertenecen a una asignación, también se creará una carpeta con el nombre de la asignación que los contendrá.
+</B></B></B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell6-1"></A><A NAME="859"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Clonado de asignaciones que coinciden con una expresión regular</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1265" HEIGHT="155" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell6-1.png"
+ ALT="Image ghshell6-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell6-2"></A><A NAME="866"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura 3.13:</STRONG>
+Resultado del clonado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="626" HEIGHT="300" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell6-2.png"
+ ALT="Image ghshell6-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<B></B>
+<P>
+<B></B>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html468"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html462"
+  HREF="node15.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html456"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html464"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html466"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html469"
+  HREF="node19.html">Automatizar la ejecución de</A>
+<B> Subir:</B> <A NAME="tex2html463"
+  HREF="node15.html">Funcionalidades requeridas</A>
+<B> Anterior:</B> <A NAME="tex2html457"
+  HREF="node17.html">Listar organizaciones, asignaciones y</A>
+ &nbsp; <B>  <A NAME="tex2html465"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html467"
+  HREF="node45.html">&#205;ndice de Materias</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>

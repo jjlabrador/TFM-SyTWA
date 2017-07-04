@@ -1,0 +1,600 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Contexto de organización</TITLE>
+<META NAME="description" CONTENT="Contexto de organización">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="next" HREF="node44.html">
+<LINK REL="previous" HREF="node42.html">
+<LINK REL="up" HREF="node39.html">
+<LINK REL="next" HREF="node44.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html830"
+  HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html824"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html818"
+  HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html826"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html828"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html831"
+  HREF="node44.html">Contexto de repositorio</A>
+<B> Subir:</B> <A NAME="tex2html825"
+  HREF="node39.html">Ejecución</A>
+<B> Anterior:</B> <A NAME="tex2html819"
+  HREF="node42.html">Contexto principal</A>
+ &nbsp; <B>  <A NAME="tex2html827"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html829"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001124000000000000000"></A>
+<A NAME="subsec:b.2.2"></A>
+<BR>
+Contexto de organización
+</H2><B><B>
+<P>
+<B><B><B><B><B>Los comandos <code>pwd</code>, <code>repos</code>, <code>clone</code> y <code>exit</code> tienen el mismo comportamiento que en el contexto principal. 
+</B></B></B></B></B>
+<P><P>
+<BR>
+<B><B>
+<P>
+<B><B><B><B><B>Además, en el caso del comando <code>clone</code>, se creará una carpeta con el nombre de la organización en la que nos encontremos y en ella se guardarán todos los repositorios clonados.
+</B></B></B></B></B>
+<P>
+<B><B>
+<UL>
+<LI><SPAN ID="txt2523">Mostrar la ayuda</SPAN>. Comando <code>help</code>.
+
+<P>
+<PRE>
+			ghshell &gt; help
+</PRE>
+
+<P>
+En función del contexto donde nos encontremos, se mostrarán diferentes opciones en la ayuda.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:help1-2"></A><A NAME="2529"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Ayuda en el contexto de organización</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1652" HEIGHT="577" ALIGN="BOTTOM" BORDER="0"
+ SRC="./help1-2.png"
+ ALT="Image help1-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+	
+</LI>
+<LI><SPAN ID="txt2533">Salir del contexto actual</SPAN>. Comando <code>back</code>.
+
+<P>
+<PRE>
+			ghshell &gt; back
+</PRE>
+
+<P>
+Si nos encontramos en un repositorio propio o en una organización, regresamos al contexto principal. 
+		Si nos encontramos dentro de un repositorio de una organización, regresamos al contexto de la organización.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:back1-1"></A><A NAME="2539"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Regreso al contexto principal desde una organización</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="678" HEIGHT="70" ALIGN="BOTTOM" BORDER="0"
+ SRC="./back1-1.png"
+ ALT="Image back1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:back1-2"></A><A NAME="2546"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.21:</STRONG>
+Regreso al contexto principal desde un repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="831" HEIGHT="134" ALIGN="BOTTOM" BORDER="0"
+ SRC="./back1-2.png"
+ ALT="Image back1-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2550">Ejecutar un script determinado</SPAN>. Comando <code>script</code>.
+
+<P>
+<PRE>
+			ghshell &gt; script &lt;file&gt; /regexp/
+</PRE>
+
+<P>
+Este comando sirve para ejecutar un script. La ruta del fichero del script puede ser absoluta o relativa.
+
+<P><P>
+<BR>
+
+<P>
+El script debe estar escrito en <code>Bash</code>.	
+
+<P>
+Al especificar una expresión regular, se ejecutará el script en todos los repositorios que coincidan con la expresión regular indicada.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:script1-1"></A><A NAME="2556"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Ejecución de script en repositorios que coinciden con la regexp pasada</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="934" HEIGHT="124" ALIGN="BOTTOM" BORDER="0"
+ SRC="./script1-1.png"
+ ALT="Image script1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<P>
+La ejecución de cada script se ejecuta en un proceso hijo independiente pero, a diferencia del clonado, el script se ejecuta línea a línea de manera <B>síncrona</B>. 
+
+<P><P>
+<BR>
+
+<P>
+Se puede observar el estado de la ejecución del script y los resultados revisando el fichero de log que se genera:
+	
+<P><P>
+<BR>
+	&lt;<code>nombre-repositorio</code>&gt;<code>-</code>&lt;<code>nombre-script</code>&gt;<code>.log</code>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:script1-2"></A><A NAME="2564"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Fichero de log generado resultante de la ejecución del script</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="511" HEIGHT="270" ALIGN="BOTTOM" BORDER="0"
+ SRC="./script1-2.png"
+ ALT="Image script1-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2568">Exportar resultados</SPAN>. Comando <code>book</code>.
+
+<P>
+<PRE>
+			ghshell &gt; book string | /regexp/
+</PRE>
+
+<P>
+Este comando genera un <B>Gitbook</B> con los resultados de todos los scripts ejecutados sobre los repositorios. Este libro se genera en formato PDF y en HTML.
+
+<P><P>
+<BR>
+
+<P>
+Al especificar un string o expresión regular, se creará el libro por cada repositorios que coincida con la expresión regular indicada.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:book1-1"></A><A NAME="2575"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Creación del Gitbook en repositorios que coinciden con la regexp pasada</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="796" HEIGHT="147" ALIGN="BOTTOM" BORDER="0"
+ SRC="./book1-1.png"
+ ALT="Image book1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+La creación del libro se realiza de manera <B>asíncrona</B>, por lo que se puede seguir trabajando mientras se genera. 
+
+<P><P>
+<BR>
+
+<P>
+Se puede observar el estado de la creación del libro y su exportación a PDF revisando los ficheros de logs que se generan:
+
+<P><P>
+<BR>
+
+<P>
+&lt;<code>nombre-repositorio</code>&gt;<code>-gitbook_build.out</code> y 
+
+<P><P>
+<BR>
+
+<P>
+&lt;<code>nombre-repositorio</code>&gt;<code>-gitbook_pdf.out</code>.
+	
+<P><P>
+<BR>
+	
+<P><P>
+<BR>
+
+<P>
+Tanto el PDF como el HTML contará con las siguientes páginas:
+
+<P>
+
+<UL>
+<LI>Índice (Tabla de contenidos).
+</LI>
+<LI>Introducción: en esta página se copiará el fichero <I>README.md</I> del repositorio. En caso de que no tuviera ese fichero, se imprimirá un mensaje que indica que el repositorio no tiene fichero README.md.
+</LI>
+<LI>Páginas correspondientes a la ejecución de cada script.
+		
+</LI>
+</UL>
+
+<P>
+La carpeta que contiene el libro en HTML se llamará:
+    
+<P><P>
+<BR>
+
+<P>
+&lt;<code>nombre-repositorio</code>&gt;<code>_gitbook/_book</code>. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-4"></A><A NAME="2586"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Localización del HTML del Gitbook</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="772" HEIGHT="681" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-4.png"
+ ALT="Image ghshell8-4">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+Para visualizar el libro en formato HTML, basta con ejecutar el comando:
+
+<P>
+<PRE>
+		[~]$ gitbook serve
+</PRE>
+
+<P>
+Se arrancará un servidor web y, accediendo a la página que nos indique la consola, se podrá leer el libro:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-5"></A><A NAME="2595"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.26:</STRONG>
+Visualizar libro en HTML (I)</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1035" HEIGHT="491" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-5.png"
+ ALT="Image ghshell8-5">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-10"></A><A NAME="2602"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.27:</STRONG>
+Visualizar libro en HTML (II)</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="587" HEIGHT="430" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-10.png"
+ ALT="Image ghshell8-10">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<P>
+El fichero PDF generado se llamará &lt;<code>nombre-repositorio</code>&gt;<code>.pdf</code>. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-6"></A><A NAME="2609"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.28:</STRONG>
+Indice del PDF generado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="885" HEIGHT="188" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-6.png"
+ ALT="Image ghshell8-6">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-7"></A><A NAME="2616"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Introducción del PDF generado</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="586" HEIGHT="480" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-7.png"
+ ALT="Image ghshell8-7">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-8"></A><A NAME="2623"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.30:</STRONG>
+Resultado del clonado del repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="527" HEIGHT="342" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-8.png"
+ ALT="Image ghshell8-8">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell8-9"></A><A NAME="2630"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Resultado de la ejecución del script en el repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="481" HEIGHT="445" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell8-9.png"
+ ALT="Image ghshell8-9">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2634">Seleccionar assignments</SPAN>. Comando <code>assignments</code>.
+
+<P>
+<PRE>
+			ghshell &gt; assignments string | /regexp/ [clone|book|script &lt;file&gt;]
+</PRE>
+
+<P>
+Los assignments son tratados como un caso especial de repositorios dentro de una organización.
+
+<P>
+Si sólo se pasa como argumento un string o una expresión regular, listará los assignments que coincidan con dicho argumento.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:assignment1-1"></A><A NAME="2640"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Assignments que coinciden con la expresión regular</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="897" HEIGHT="144" ALIGN="BOTTOM" BORDER="0"
+ SRC="./assignments1-1.png"
+ ALT="Image assignments1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+En el caso de que además se pase alguno de los parámetros: <code>clone</code>, <code>script &lt;file&gt;</code> o <code>book</code>; se clonará, se ejecutará un script o se creará un libro respectivamente en los repositorios que coincidan con el string o la expresión regular. 
+
+<P><P>
+<BR>
+
+<P>
+Además, en el caso del comando <code>clone</code>, se creará una carpeta con el nombre de la asignación que contendrá todas las asignaciones clonadas.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ghshell6-1"></A><A NAME="2647"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Clonado de asignaciones que coinciden con la expresión regular</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1265" HEIGHT="155" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ghshell6-1.png"
+ ALT="Image ghshell6-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:assignment1-2"></A><A NAME="2654"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Ejecución de script en assignments que coinciden con la expresión regular</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1137" HEIGHT="148" ALIGN="BOTTOM" BORDER="0"
+ SRC="./assignments1-2.png"
+ ALT="Image assignments1-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:assignment1-3"></A><A NAME="2661"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Creación del Gitbook en los assignments que coinciden con la expresión regular</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="963" HEIGHT="189" ALIGN="BOTTOM" BORDER="0"
+ SRC="./assignments1-3.png"
+ ALT="Image assignments1-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:assignment1-4"></A><A NAME="2668"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.36:</STRONG>
+Directorios y ficheros generados</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="732" HEIGHT="564" ALIGN="BOTTOM" BORDER="0"
+ SRC="./assignments1-4.png"
+ ALT="Image assignments1-4">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+</UL><B><B>
+<P>
+<B><B>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html830"
+  HREF="node44.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html824"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html818"
+  HREF="node42.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html826"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html828"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html831"
+  HREF="node44.html">Contexto de repositorio</A>
+<B> Subir:</B> <A NAME="tex2html825"
+  HREF="node39.html">Ejecución</A>
+<B> Anterior:</B> <A NAME="tex2html819"
+  HREF="node42.html">Contexto principal</A>
+ &nbsp; <B>  <A NAME="tex2html827"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html829"
+  HREF="node45.html">&#205;ndice de Materias</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>

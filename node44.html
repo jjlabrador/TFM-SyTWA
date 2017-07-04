@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Contexto de repositorio</TITLE>
+<META NAME="description" CONTENT="Contexto de repositorio">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="previous" HREF="node43.html">
+<LINK REL="up" HREF="node39.html">
+<LINK REL="next" HREF="node45.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html842"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html836"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html832"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html838"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html840"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html843"
+  HREF="node45.html">&#205;ndice de Materias</A>
+<B> Subir:</B> <A NAME="tex2html837"
+  HREF="node39.html">Ejecución</A>
+<B> Anterior:</B> <A NAME="tex2html833"
+  HREF="node43.html">Contexto de organización</A>
+ &nbsp; <B>  <A NAME="tex2html839"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html841"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION001125000000000000000"></A>
+<A NAME="subsec:b.2.3"></A>
+<BR>
+Contexto de repositorio
+</H2><B><B>
+<P>
+<B><B><B><B><B>Los comandos <code>pwd</code> y <code>exit</code> tienen el mismo comportamiento que en el contexto principal. 
+</B></B></B></B></B>
+<P><P>
+<BR>
+<B><B>
+<P>
+<B><B><B><B><B>El comando <code>back</code> tienen el mismo comportamiento que en el contexto de organizaciones.
+</B></B></B></B></B>
+<P>
+<B><B>
+<UL>
+<LI><SPAN ID="txt2676">Mostrar la ayuda</SPAN>. Comando <code>help</code>.
+
+<P>
+<PRE>
+			ghshell &gt; help
+</PRE>
+
+<P>
+En función del contexto donde nos encontremos, se mostrarán diferentes opciones en la ayuda.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:help1-2"></A><A NAME="2682"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.37:</STRONG>
+Ayuda en el contexto de un repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1418" HEIGHT="412" ALIGN="BOTTOM" BORDER="0"
+ SRC="./help1-3.png"
+ ALT="Image help1-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2686">Clonar repositorios</SPAN>. Comando <code>clone</code>.
+
+<P>
+<PRE>
+			ghshell &gt; clone
+</PRE>
+
+<P>
+En este contexto, se ejecuta sin argumentos y clona el repositorio donde nos encontremos.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:clone1-4"></A><A NAME="2692"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Clonado de un repositorio dentro de una organización</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1268" HEIGHT="127" ALIGN="BOTTOM" BORDER="0"
+ SRC="./clone1-4.png"
+ ALT="Image clone1-4">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2696">Ejecutar un script determinado</SPAN>. Comando <code>script</code>.
+
+<P>
+<PRE>
+			ghshell &gt; script &lt;file&gt;
+</PRE>
+
+<P>
+En este contexto, se ejecuta sin argumentos y ejecuta el script indicado sobre el repositorio donde nos encontremos.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:script1-3"></A><A NAME="2702"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Ejecución de un script en un repositorio dentro de una organización</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1206" HEIGHT="122" ALIGN="BOTTOM" BORDER="0"
+ SRC="./script1-3.png"
+ ALT="Image script1-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2706">Exportar resultados</SPAN>. Comando <code>book</code>.
+
+<P>
+<PRE>
+			ghshell &gt; book
+</PRE>
+
+<P>
+En este contexto, se ejecuta sin argumentos y crea un Gitbook con los resultados de todos los scripts ejecutados sobre el repositorio donde nos encontremos.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:book1-3"></A><A NAME="2712"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura:</STRONG>
+Creación del Gitbook en un repositorio dentro de una organización</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1038" HEIGHT="141" ALIGN="BOTTOM" BORDER="0"
+ SRC="./book1-3.png"
+ ALT="Image book1-3">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+<LI><SPAN ID="txt2716">Obtener el propietario del repositorio</SPAN>. Comando <code>owner</code>.
+
+<P>
+<PRE>
+			ghshell &gt; owner
+</PRE>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:owner1-1"></A><A NAME="2722"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.41:</STRONG>
+Propietario del repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="403" HEIGHT="116" ALIGN="BOTTOM" BORDER="0"
+ SRC="./owner1-1.png"
+ ALT="Image owner1-1">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Además, si nos encontramos en un repositorio que pertenece a una organización, muestra también los contribuyentes.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:owner1-2"></A><A NAME="2729"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figura B.42:</STRONG>
+Contribuyentes del repositorio</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="1078" HEIGHT="132" ALIGN="BOTTOM" BORDER="0"
+ SRC="./owner1-2.png"
+ ALT="Image owner1-2">
+		
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+</LI>
+</UL><B><B>
+<P>
+<B><B>
+<P>
+<B><B>
+<P>
+<B><B>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html842"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html836"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html832"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html838"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html840"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html843"
+  HREF="node45.html">&#205;ndice de Materias</A>
+<B> Subir:</B> <A NAME="tex2html837"
+  HREF="node39.html">Ejecución</A>
+<B> Anterior:</B> <A NAME="tex2html833"
+  HREF="node43.html">Contexto de organización</A>
+ &nbsp; <B>  <A NAME="tex2html839"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html841"
+  HREF="node45.html">&#205;ndice de Materias</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>

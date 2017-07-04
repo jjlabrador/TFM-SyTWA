@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Asincronía</TITLE>
+<META NAME="description" CONTENT="Asincronía">
+<META NAME="keywords" CONTENT="TFM">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="mystyle.css">
+
+<LINK REL="next" HREF="node24.html">
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="up" HREF="node22.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html538"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html532"
+  HREF="node22.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html526"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html534"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html536"
+  HREF="node45.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Siguiente:</B> <A NAME="tex2html539"
+  HREF="node24.html">Autocompletado de comandos</A>
+<B> Subir:</B> <A NAME="tex2html533"
+  HREF="node22.html">Problemas encontrados y soluciones</A>
+<B> Anterior:</B> <A NAME="tex2html527"
+  HREF="node22.html">Problemas encontrados y soluciones</A>
+ &nbsp; <B>  <A NAME="tex2html535"
+  HREF="node1.html">&#205;ndice General</A></B> 
+ &nbsp; <B>  <A NAME="tex2html537"
+  HREF="node45.html">&#205;ndice de Materias</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00631000000000000000"></A>
+<A NAME="subsec:3.3.1"></A>
+<BR>
+Asincronía
+</H2><B></B>
+<P>
+<B><B><B><B>Una de las características más importantes del lenguaje <A NAME="9357"></A><B><A HREF="node33.html#apend1:js">$JavaScript$</A> es la asincronía. Usa un modelo de operaciones de entrada/salida sin bloqueo y orientado a eventos, que lo hace ligero y eficiente. Sin embargo, algunas acciones que debía realizar esta herramienta debían de ser síncronas. Ejemplos son el login del usuario y ejecución de scripts.
+</B></B></B></B>
+<P><P>
+<BR>
+<B></B>
+<P>
+<B></B><B><B>Solución</B></B>
+<P><P>
+<BR>
+<B></B>
+<P>
+<B><B><B><B>La solución a este comportamiento pasó por realizar un amplio estudio de la documentación para usar mecanismos que permitieran bloquear la ejecución de la herramienta en las partes que deseábamos. Los mecanismos usados han sido:
+</B></B></B></B>
+<P>
+<B></B>
+<UL>
+<LI><SPAN ID="txt1038">Funciones síncronas del propio lenguaje</SPAN>.
+</LI>
+<LI><A NAME="1095"></A><A HREF="node33.html#apend1:promesa">$Promesas$</A>.
+</LI>
+<LI>Métodos <A NAME="1102"></A><A HREF="node33.html#apend1:async-await">$Async/Await$</A>.
+</LI>
+<LI><SPAN ID="txt1041">Librerías</SPAN> con métodos implementados de manera síncrona.
+</LI>
+</UL><B></B>
+<P>
+<B>
+<BR><HR>
+<ADDRESS>
+Juan José
+2017-07-04
+</ADDRESS>
+</BODY>
+</HTML>
