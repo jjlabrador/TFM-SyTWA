@@ -14,6 +14,7 @@ BIBTEX   = bibtex
 PDFLATEX = pdflatex
 DVIPS    = dvips
 L2HTML   = latex2html
+LATEX2HTMLOPTIONS = -html_version 4.0,latin1,unicode -contents_in_navigation -white -local_icons
 PLOT     = gnuplot
 SRC      = TFM.tex
 MASSRC   = TFM.tex
@@ -37,6 +38,9 @@ pdf: $(SRC)
 	
 html: $(PS)
 	$(L2HTML) -dir HTML -split 4 -local_icons -long_titles 20 $(SRC)
+
+latex2html:
+	$(L2HTML) $(LATEX2HTMLOPTIONS) $(MASSRC)
 
 ps: $(DVI)
 	$(DVIPS) -o $(PS) $(DVI)
